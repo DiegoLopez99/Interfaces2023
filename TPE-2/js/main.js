@@ -10,11 +10,14 @@ addEventListener("DOMContentLoaded", (e) => {
     }, 5000);
 
 
-    // ------ Menu-------
+    // ------ Menu y carrito-------
     document.querySelector(".btnMenu").addEventListener("click", btnToggle);
+    document.querySelector(".btnCarrito").addEventListener("click", btnToggleCarrito)
 
     let icono = document.querySelector("#iconoMenu");
     let menu = document.querySelector(".menu");
+    let iconoCarrito = document.querySelector("#iconoCarrito");
+    let carrito = document.querySelector(".carrito");
 
     function btnToggle(){
         if(icono.classList.contains("fa-bars")){
@@ -26,6 +29,18 @@ addEventListener("DOMContentLoaded", (e) => {
             icono.classList.add("fa-bars");     
         }
         menu.classList.toggle("activar")
+    }
+
+    function btnToggleCarrito(){
+        if(iconoCarrito.classList.contains("fa-cart-shopping")){
+            iconoCarrito.classList.remove("fa-cart-shopping");
+            iconoCarrito.classList.add("fa-xmark");
+        }
+        else{
+            iconoCarrito.classList.remove("fa-xmark");
+            iconoCarrito.classList.add("fa-cart-shopping");     
+        }
+        carrito.classList.toggle("activar")
     }
 
     // ------ Carrusel Inicio ------

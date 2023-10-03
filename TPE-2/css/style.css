@@ -147,8 +147,8 @@ body{
     align-items: center;
     justify-content: space-between;
     box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.253);
-    padding-left: 40px;
-    padding-right: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .containerNavbar .logo{
@@ -228,7 +228,8 @@ body{
 }
 
 
-.btnMenu{
+.btnMenu,
+.btnCarrito{
     display: flex;
     width: 50px;
     height: 50px;
@@ -247,7 +248,9 @@ body{
     font-size: 26px;
 }
 
-.btnMenu:hover{
+.btnMenu:hover,
+.btnCarrito:hover,
+.item .btnBorrar:hover{
     background-color: var(--color-primario-sombra1);
 }
 
@@ -256,6 +259,18 @@ body{
     position: absolute;
     top: 70px;
     left: 0;
+    background-color: var(--color-primario);
+    opacity: 0;
+    display: none;
+    z-index: 500;
+}
+
+.carrito{
+    width: 255px;
+    position: absolute;
+    top: 70px;
+    height: 400px;
+    right: 0;
     background-color: var(--color-primario);
     opacity: 0;
     display: none;
@@ -301,7 +316,7 @@ body{
 }
 
 .descripcionUsuario a:hover{
-    color: #8488FF;
+    color: var(--color-secundario-sombra3);
 }
 
 
@@ -346,7 +361,98 @@ body{
     transform: scale(1.15);
 }
 
-/*-------------- Seccion Proximo estreno Inicio -------------*/
+.tituloCarrito{
+    width: 100%;
+    height: 10%;
+    border-bottom: solid 1px var(--color-primario-sombra3);
+    display: flex;
+    align-items: center;
+}
+
+.tituloCarrito h4{
+    font-size: 22px;
+    color: #fff;
+    margin-left: 8px;
+}
+
+.carrito .detalle{
+    width: 100%;
+    height: 80%;
+    border-bottom: solid 1px var(--color-primario-sombra3);
+}
+
+.carrito .detalle .item{
+    width: 100%;
+    display: flex;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 14px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item .imagenItem{
+    width: 65px;
+    height: 45px;
+}
+
+.item .imagenItem img{
+    width: 100%;
+    height: 100%;
+}
+
+.item .descripItem{
+    font-size: 15px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.item .btnBorrar{
+    display: flex;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: var(--color-primario-sombra2);
+    align-items: center;
+    justify-content: center;
+    color: var(--color-acento);
+    font-size: 16px;
+    transition: all 500ms;
+    cursor: pointer;
+
+}
+
+.opcionesCarrito{
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.opcionesCarrito h6{
+    color: #fff;
+    font-size: 15px;
+    font-weight: bolder;
+    margin-left: 8px;
+}
+
+.opcionesCarrito .btnComprarCarrito{
+    margin-right: 8px;
+    padding: 5px 10px;
+    background-color: var(--color-primario-sombra2);
+    font-size: 14px;
+    border-radius: 5px;
+    color: var(--color-acento);
+    transition: all 400ms;
+    cursor: pointer;
+}
+
+.opcionesCarrito .btnComprarCarrito:hover{
+    background-color: var(--color-acento);
+    color: #fff;
+}
 
 .containerInicio{
     width: 85%;
@@ -358,142 +464,119 @@ body{
 
 /* ---------- Estilos para Cards --------- */
 
-.card{
+/*.card{
     min-width: 35%; 
     height: 245px;
     position: relative;
     overflow: hidden;
     border-radius: 25px;
     margin-right: 10px;
-}
+}*/
 
-.cardGenero{
-    min-width: 20%; 
-    height: 155px;
-}
-
-
-.card a img{
-    width: 100%;
-    height: 100%;
-    transition: all 400ms ease-out;
-}
-
-.card .capa{
+.card{
+    min-width: 22%; 
+    height: 250px;
+    background-color: #151e2d9f;
+    border: solid 1px var(--color-acento);
+    border-radius: 10px;
+    align-items: center;
+    margin-right: 14px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    transition: all 300ms ease-out;
+}
+
+.card .imagenCard{
+    width: 94%;
+    height: 160px;
+    border-radius: 10px;
+    margin-top: 3px;
+    overflow: hidden;
+}
+
+.card .imagenCard a img{
     width: 100%;
     height: 100%;
-    position: absolute;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.863);
-    color: #fff;
     transition: all 400ms ease-out;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    visibility: hidden;
+    
 }
 
-.card .capa h6{
-    font-size: 30px;
-    margin-bottom: 10px;
+.card .descripCard{
+    width: 94%;
 }
 
-.cardGenero .capa h6{
+.card  .descripCard h6{
     font-size: 20px;
     margin-bottom: 5px;
+    color: #fff;
 }
 
-.card .capa .agregarCarrito{
+.card  .descripCard .etiquetaBoton{
     display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
 
-.card .capa .agregarCarrito button{
-    padding: 5px 15px;
-    background-color: #27BF17;
-    font-size: 16px;
+.card .descripCard .etiquetaBoton .btnPlay{
+    padding: 3px 12px;
+    background-color: var(--color-acento);
+    font-size: 15px;
     border-radius: 3px;
     color: #fff;
     transition: all 400ms;
     cursor: pointer;
 }
 
-.cardGenero .capa .agregarCarrito button{
-    padding: 5px 10px;
-    font-size: 14px;
-}
-
-
-.card .capa .agregarCarrito p{
-    font-size: 20px;
-    padding: 4px;
-}
-
-.cardGenero .capa .agregarCarrito p{
-    font-size: 16px;
-}
-
-.card .capa button{
-    padding: 10px 25px;
-    background-color: #27BF17;
-    font-size: 18px;
+.card .descripCard .etiquetaBoton a{
+    padding: 3px 12px;
+    background-color: var(--color-acento);
+    font-size: 15px;
     border-radius: 3px;
     color: #fff;
     transition: all 400ms;
     cursor: pointer;
 }
 
-.card .capa a{
-    padding: 10px 25px;
-    background-color: #27BF17;
-    font-size: 18px;
+.card .descripCard .etiquetaBoton .agregadoCarrito{
+    padding: 3px 12px;
+    font-size: 15px;
     border-radius: 3px;
+    color: var(--color-acento);
+    border: solid 2px var(--color-acento);
+    background-color: #ffffff00;
+    cursor: default;
+}
+
+.card  .descripCard .etiquetaBoton .etiquetaGratis p{
     color: #fff;
-    transition: all 400ms;
-    cursor: pointer;
-}
-
-.cardGenero .capa button{
-    padding: 6px 20px;
-    font-size: 16px;
-}
-
-.card .etiquetaGratis{
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-top: 10px;
-    margin-right: -33px;
-}
-
-.card .etiquetaGratis p{
-    color: #fff;
-    padding: 3px 45px;
+    padding: 3px 12px;
     background-color: #27BF17;
-    transform: rotate(35deg);
+    font-size: 15px;
+    border-radius: 3px;
 }
 
-.card .capa button:hover{
-    background-color: #0B7800;
+.card  .descripCard .etiquetaBoton .etiquetaPago p{
+    color: #fff;
+    padding: 3px 12px;
+    background-color: var(--color-secundario);
+    font-size: 15px;
+    border-radius: 3px;
 }
 
-.card .capa a:hover{
-    background-color: #0B7800;
+.card .descripCard .etiquetaBoton .btnPlay:hover,
+.card .descripCard .etiquetaBoton a:hover{
+    background-color: var(--color-acento-sombra1);
 }
 
-.card:hover >.capa{
-    opacity: 1;
-    visibility: visible;
+.card:hover{
+    box-shadow: 0 0 15px var(--color-acento);
 }
 
-.card:hover >  a img{
+.card:hover >  .imagenCard a img{
     transform: scale(1.1);
 }
 
-.card .capa .agregarCarrito button:hover{
-    background-color: #0B7800;
-}
 
 /* ---------- Carrusel ------------ */
 
@@ -570,7 +653,7 @@ body{
 .containerCarrusel,
 .carruselEscenarios .containerCarruselEscenarios{
     width: 100%;
-    padding: 5px 0px;
+    padding: 15px 0px;
     overflow: hidden;
     scroll-behavior: smooth;
 }
@@ -586,7 +669,7 @@ body{
 footer{
     width: 100%;
     height: 420px;
-    background-color: #08287C;
+    background-color: var(--color-primario);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -605,8 +688,8 @@ footer{
 .cardFooter{
     width: 240px;
     height: 300px;
-    border: solid 4px #021344;
-    background-color: #1C45B4;
+    border: solid 4px var(--color-acento-sombra2);
+    background-color: var(--color-acento-sombra3);
     position: relative;
     border-radius: 10px;
     transition: all 300ms ease-out;
@@ -641,7 +724,7 @@ footer{
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: #021344;
+    background-color: var(--color-acento-sombra2);
     margin-bottom: -2px;
     margin-left: -2px;
     border-bottom-left-radius: 10px;
@@ -673,20 +756,13 @@ footer{
 }
 
 .cardFooter .descripcionCard .descripcion a:hover{
-    color: #8488FF;
+    color: var(--color-acento-sombra3);
 }
 
 .cardFooter:hover > .imgFooter img{
     transform: translateY(-15px);
 }
 
-.cardFooter:hover > .descripcionCard{
-    background-color: #072064;
-}
-
-.cardFooter:hover{
-    border: solid 4px #072064;
-}
 
 .cardFooter .descripcionCard .descripcion .iconosRedesSociales{
     width: 100%;
@@ -704,7 +780,7 @@ footer{
 }
 
 .cardFooter .descripcionCard .descripcion .iconosRedesSociales i:hover{
-    color: #8488FF;
+    color: var(--color-acento-sombra3);
     transform: scale(1.2);
 }
 
@@ -715,7 +791,7 @@ footer{
 }
 
 .cardFooter .descripcionCard .descripcion .correo:hover{
-    color: #8488FF;
+    color: var(--color-acento-sombra3);
 }
 
 /*-------- Pagina de Juego ---------*/
@@ -738,7 +814,7 @@ footer{
 }
 
 .breadcrumb a:hover{
-    color: #8488FF;
+    color: var(--color-acento-sombra3);
 }
 
 .breadcrumb i{
@@ -761,7 +837,7 @@ footer{
 
 .displayJuego .displayInstruc .videoJuego{
     width: 76%;
-    background-color: #08287C;
+    background-color: var(--color-primario);
     border-radius: 20px;
     margin-right: 1%;
     display: flex;
@@ -769,13 +845,13 @@ footer{
 }
 
 .displayJuego .displayInstruc .videoJuego:hover{
-    background-color: #041c64;
+    background-color: var(--color-primario-sombra1);
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.473);
 }
 
 .displayJuego .displayInstruc .instrucciones{
     width: 23%;
-    background-color: #08287C;
+    background-color: var(--color-primario);
     border-radius: 20px;
 }
 
@@ -820,7 +896,7 @@ footer{
     padding-right: 25px;
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: #27BF17;
+    background-color: var(--color-acento);
     border-radius: 10px;
     font-size: 20px;
     color: #fff;
@@ -830,7 +906,7 @@ footer{
 }
 
 .displayJuego .displayInstruc .videoJuego .seccionPlay button:hover{
-    background-color: #0B7800;
+    background-color: var(--color-acento-sombra2);
 }
 
 .displayJuego .displayInstruc .instrucciones h4{
@@ -858,7 +934,7 @@ footer{
     display: flex;
     width: 76%;
     height: 50px;
-    background-color: #08287C;
+    background-color: var(--color-primario);
     border-radius: 15px;
     margin-top: 10px;
     justify-content: space-between;
@@ -899,13 +975,13 @@ footer{
 
 .displayJuego .socialJuego .btnSocial:hover > i,
 .displayJuego .socialJuego .btnSocial:hover > p{
-    color: #8488FF;
+    color: var(--color-acento-sombra3);
 }
 
 .containerPagJuego .contDescripcionJuego{
     width: 100%;
     display: flex;
-    background-color: #08287C;
+    background-color: var(--color-primario);
     border-radius: 20px;
     margin-top: 10px;
 
@@ -985,7 +1061,7 @@ footer{
 .imagenesJuego .cardImagenes .containerSlider .btnSliderLeft{
     position: absolute;
     border: none;
-    background-color: #CA1551;
+    background-color: var(--color-acento);
     font-size: 24px;
     height: 50px;
     width: 50px;
@@ -1024,7 +1100,7 @@ footer{
 
 .seccionComentarios{
     width: 100%;
-    background-color: #08287C;
+    background-color: var(--color-primario);
     margin-top: 10px;
     margin-bottom: 20px;
     border-radius: 20px;
@@ -1062,14 +1138,14 @@ footer{
     width: 100%;
     background: none;
     border: none;
-    border-bottom: solid 2px #1C45B4;
+    border-bottom: solid 2px var(--color-primario-sombra3);
     height: 30px;
     color: #fff;
     font-size: 15px;
 }
 
 .seccionComentarios .miComentario .conteidoFormulario .input input::placeholder{
-    color: #1C45B4;
+    color: var(--color-primario-sombra3);
     font-size: 15px;
     padding: 5px;
 }
@@ -1175,7 +1251,7 @@ footer{
     width: calc(100% - 50px);
     margin-left: 25px;
     margin-top: 25px;
-    border-top: solid 4px #1C45B4;
+    border-top: solid 4px var(--color-primario-sombra3);
 }
 
 .seccionComentarios .comentariosComunidad .comentario{
