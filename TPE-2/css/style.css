@@ -24,7 +24,7 @@
 }
 
 body{
-    background-color: #1C45B4;
+    background-color: var(--color-primario-sombra2);
 }
 
 /* ------------- Loader ------------ */
