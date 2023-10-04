@@ -12,52 +12,21 @@
     <title>DT GAMES - Register</title>
 </head>
 <body>
+    <div class="containerBackgound" id="containerBackgoundIndex">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
     <header>
         <div class="containerNavbar">
             <div class="menuLogo">
-                <div class="containerMenu">
-                    <div class="btnMenu">
-                        <i class="fa-solid fa-bars" id="iconoMenu"></i>
-                    </div>
-                    <div class="menu">
-                        <div class="usuario">
-                            <div class="avatarUsuario">
-                                <i class="fa-regular fa-user"></i>
-                            </div>
-                            <div class="descripcionUsuario">
-                                <p class="nombreUsuario">Diego Lopez</p>
-                                <a href="#">Configurar Perfil</a>
-                            </div>
-                        </div>
-                        <div class="navegacion">
-                            <ul>
-                                <li><a href="index.html">Inicio</a></li>
-                                <li><a href="#">Mis Juegos</a></li>
-                                <li><a href="#">Categorias</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="Proximo-estreno.html">Novedades</a></li>
-                                <li><a href="#" class="cerrarCesion">Cerrar Cesion</a></li>
-                            </ul>
-                        </div>
-                        <div class="redesSociales">
-                            <i class="fa-brands fa-instagram"></i>
-                            <i class="fa-brands fa-twitter"></i>
-                            <i class="fa-brands fa-facebook"></i>
-                            <i class="fa-brands fa-discord"></i>
-                        </div>
-                    </div>
-                </div>
                 <div class="logo">
                     <i class="fa-solid fa-gamepad"></i>
                     <h6 class="tituloLogo">DT Games</h6>   
                 </div>
             </div>
-            <!--Si elimino container carrito deja de funcionar-->
-            <div class="containerCarrito">
-                <div class="btnCarrito">
-                    <i class="fa-solid fa-cart-shopping" id="iconoCarrito"></i>
-                </div>
-            </div>
+            
         </div>
     </header>
     <section>
@@ -77,50 +46,39 @@
             <div class="containerForm">
                 <div class="formulario">
                     <h2 class="titulo">Registrarse</h2>
-                    <form class="register" action="login.html">
-                        <div class="campos">
-                            <h3 class="subtitulo">Datos personales</h3>    
-                            <p class="parrafo"><label>Nombre</label></p>
+                    <form class="register" action="index.html">
+                        <div class="campos">    
+                            <p class="parrafo" id="nombreForm"><label>Nombre</label></p>
                             <input type="text" name="nombre" id="nombreUsuario" required minlength="4" placeholder="Nombre">
-                            <p class="parrafo senialador"><label>Apellido</label></p>
+                            <p class="parrafo senialador" id="apellidoForm"><label>Apellido</label></p>
                             <input type="password" name="contraseña" id="contraseña" required minlength="6" placeholder="Contraseña">
-                            <p class="parrafo"><label>Edad</label></p>
+                            <p class="parrafo" id="edadForm"><label>Edad</label></p>
                             <input type="number" name="edad" id="edad" required placeholder="Edad">
-                            <h4 class="subtitulo">Cuenta</h4>
                             <p class="parrafo"><label>Direccion de correo</label></p>
                             <input type="email" name="email" id="email" placeholder="Direccion de correo">
                             <p class="parrafo"><label>Nombre de Usuario</label></p>
                             <input type="text" name="nombreUsuario" id="nombreUsuario" placeholder="Nombre de Usuario">
-                            <p class="parrafo"><label>Contraseña</label></p>
+                            <p class="parrafo" id="contraseñaForm"><label>Contraseña</label></p>
                             <input type="password" name="contraseña" id="contraseña" placeholder="Contraseña">
-                            <p class="parrafo"><label>Confirmar Contraseña</label></p>
+                            <p class="parrafo" id="confirmarForm"><label>Confirmar Contraseña</label></p>
                             <input type="password" name="confirmarContraseña" id="confirmarContraseña" placeholder="Confirmar Contraseña">
                         </div>
                         <figure>
                             <img src="/img/Pagina Login-Register/captcha.png" alt="Captcha" id="captcha">
                         </figure>
                         <button type="submit" class="btnEnviar">Registrarse</button>
-                        <p class="ayuda parrafo">¿Ya tienes tu cuenta? <a href="login.html"> Inicia Sesión</a>.</p>
-                        <h3 class="subtitulo">O registrate con</h3>
-                        <figure>
-                            <img src="/img/Pagina Login-Register/login.jpeg" alt="Login with google" id="login">
-                        </figure>
+                        <p class="ayuda parrafo" id="deshacerSemantico">¿Ya tienes tu cuenta? <a href="login.html"> Inicia Sesión</a>.</p>
+                        <div class="signGoogle">
+                            <h3 class="subtitulo">O registrate con</h3>
+                            <figure>
+                                <img src="/img/Pagina Login-Register/login.jpeg" alt="Login with google" id="login">
+                            </figure>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
         </section>
-
-
-
-
-
-
-
-
-
-
-
         <footer>
             <div class="contcardsFooter">
                 <div class="cardFooter">
