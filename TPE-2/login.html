@@ -60,6 +60,7 @@
             </div>
         </div>
     </header>
+    <section>
     <div class="containerPrincipal">    
         <div class="containerBienvenida">
             <div class="titulo">
@@ -73,24 +74,31 @@
                 </p>
             </div>
         </div>
-        <div class="containerLogin">
+        <div class="containerForm">
             <div class="formulario">
                 <h2 class="titulo">Iniciar Sesión</h2>
-                <form action="inicio.html">
-                    <p class="parrafo"><label>Nombre de usuario</label></p>
-                    <input type="text" name="nombre" id="nombreUsuario" required minlength="4" placeholder="Nombre de Usuario">
-                    <p class="parrafo"><label>Contraseña</label></p>
-                    <input type="password" name="contraseña" id="contraseña" required minlength="6" placeholder="Contraseña">
-                    <!--Preguntar si pasa algo si lo mandamos asi-->
+                <form class="login" action="inicio.html">
+                    <div class="campos">    
+                        <p class="parrafo"><label>Nombre de usuario</label></p>
+                        <input type="text" name="nombre" id="nombreUsuario" required minlength="4" placeholder="Nombre de Usuario">
+                        <p class="parrafo senialador"><label>Contraseña</label></p>
+                        <input type="password" name="contraseña" id="contraseña" required minlength="6" placeholder="Contraseña">
+                    </div>
+                    <figure>
                         <img src="/img/Pagina Login-Register/captcha.png" alt="Captcha" id="captcha">
+                    </figure>
                     <button type="submit" class="btnEnviar">Iniciar Sesión</button>
-                    <p class="parrafo">¿Olvidaste tu contraseña?</p>
-                    <p class="parrafo">¿No tienes cuenta? <a href="register.html"> Registrate</a>.</p>
-
+                    <p class="ayuda parrafo">¿Olvidaste tu contraseña?</p>
+                    <p class="ayuda parrafo">¿No tienes cuenta? <a href="register.html"> Registrate</a>.</p>
+                    <h3 class="subtitulo">O inicia con</h3>
+                    <figure>
+                        <img src="/img/Pagina Login-Register/login.jpeg" alt="Login with google" id="login">
+                    </figure>
                 </form>
-        </div>
+            </div>
         </div>
     </div>
+    </section>
 
 
 

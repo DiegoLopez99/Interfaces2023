@@ -60,24 +60,56 @@
             </div>
         </div>
     </header>
-    <div class="containerPrincipal">    
-        <div class="containerBienvenida">
-            <div class="titulo">
-                <h1 class="titulo">¡UNETE A LA FAMILIA DT GAMES!</h1>
+    <section>
+        <div class="containerPrincipal">    
+            <div class="containerBienvenida">
+                <div class="titulo">
+                    <h1 class="titulo">¡UNETE A LA FAMILIA DT GAMES!</h1>
+                </div>
+                <div class="containerTexto">
+                    <p class="parrafo">
+                        Te damos la bienvenida a DT GAMES. Al registrarte podras tener libre acceso 
+                        a juegos exclusivos, en los cuales podras divertirte sin parar. Contamos 
+                        con una gran comunidad, ¡No esperes mas y unete a nosotros!
+                    </p>
+                </div>
             </div>
-            <div class="containerTexto">
-                <p class="parrafo">
-                    Te damos la bienvenida a DT GAMES. Al registrarte podras tener libre acceso 
-                    a juegos exclusivos, en los cuales podras divertirte sin parar. Contamos 
-                    con una gran comunidad, ¡No esperes mas y unete a nosotros!
-                </p>
+            <div class="containerForm">
+                <div class="formulario">
+                    <h2 class="titulo">Registrarse</h2>
+                    <form class="register" action="login.html">
+                        <div class="campos">
+                            <h3 class="subtitulo">Datos personales</h3>    
+                            <p class="parrafo"><label>Nombre</label></p>
+                            <input type="text" name="nombre" id="nombreUsuario" required minlength="4" placeholder="Nombre">
+                            <p class="parrafo senialador"><label>Apellido</label></p>
+                            <input type="password" name="contraseña" id="contraseña" required minlength="6" placeholder="Contraseña">
+                            <p class="parrafo"><label>Edad</label></p>
+                            <input type="number" name="edad" id="edad" required placeholder="Edad">
+                            <h4 class="subtitulo">Cuenta</h4>
+                            <p class="parrafo"><label>Direccion de correo</label></p>
+                            <input type="email" name="email" id="email" placeholder="Direccion de correo">
+                            <p class="parrafo"><label>Nombre de Usuario</label></p>
+                            <input type="text" name="nombreUsuario" id="nombreUsuario" placeholder="Nombre de Usuario">
+                            <p class="parrafo"><label>Contraseña</label></p>
+                            <input type="password" name="contraseña" id="contraseña" placeholder="Contraseña">
+                            <p class="parrafo"><label>Confirmar Contraseña</label></p>
+                            <input type="password" name="confirmarContraseña" id="confirmarContraseña" placeholder="Confirmar Contraseña">
+                        </div>
+                        <figure>
+                            <img src="/img/Pagina Login-Register/captcha.png" alt="Captcha" id="captcha">
+                        </figure>
+                        <button type="submit" class="btnEnviar">Registrarse</button>
+                        <p class="ayuda parrafo">¿Ya tienes tu cuenta? <a href="login.html"> Inicia Sesión</a>.</p>
+                        <h3 class="subtitulo">O registrate con</h3>
+                        <figure>
+                            <img src="/img/Pagina Login-Register/login.jpeg" alt="Login with google" id="login">
+                        </figure>
+                    </form>
+                </div>
             </div>
         </div>
-        <div class="containerRegister">
-            
-        </div>
-    </div>
-
+        </section>
 
 
 

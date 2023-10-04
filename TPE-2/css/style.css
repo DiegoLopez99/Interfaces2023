@@ -1348,7 +1348,7 @@ footer{
     display: flex;
 }
 .containerBienvenida{
-    width: 60%;
+    width: 66%;
     margin: 3em;
     margin-top: 10em;
 }
@@ -1356,39 +1356,50 @@ footer{
     padding-top: 1em;
     font-size: 1.3em;
 }
-.containerLogin{
+.containerForm{
     background-color: rgba(255, 255, 255, 0.2);
-    width: 38%;
+    width: 34%;
     border-radius: 1em;
     margin-top: 7em;
     margin-bottom: 10em;
     margin-right: 3em;
     
 }
-.containerLogin .formulario{
+.containerForm .formulario{
     margin-left: 1.3em;
     margin-right: 1.3em;
 }
-.containerLogin .titulo{
+.containerForm .titulo{
     text-align: center;
     border-bottom: solid #fff;
-    padding: 1em;
+    padding: 0.4em;
     border-width: thin;
-    font-size: 1.4em;
 }
-.containerLogin form{
-    padding-top: 2em;
+.login{
+    padding-top: 1.5em;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
-.containerLogin form p label{
-    align-items: start; 
+.containerForm form .subtitulo{
+    font-size: 1.2em;
+    color: white;
+    margin: 0.6em;
+    text-align: center;
+}
+.containerForm form .campos .subtitulo{
+    text-align: start;
+    padding-left: 17%;
+}
+.containerForm form p label{ 
     font-weight: bold;
 }
-.containerLogin input{
-    margin-top: 1em;
-    margin-bottom: 1em;
+.containerForm .campos{
+    display:flex;
+    flex-direction: column;
+}
+.containerForm .campos input{
+    margin: 0em auto 1em;
+    text-align: center;
     height: 3em;
     width: 50%;
     background-color: inherit;
@@ -1397,28 +1408,53 @@ footer{
     border-width: thin;
     border-color:rgba(255, 255, 255);
 }
-.containerLogin ::placeholder{
+.containerForm .campos p label{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding-right: 20%;
+}
+.senialador{
+    padding-right: 15%;
+}
+.containerForm ::placeholder{
     color: rgba(255, 255, 255, 0.85);
-    padding-left: 1em;
+}
+.containerForm form figure{
+    display: flex;
+    justify-content: center;
 }
 #captcha{
-    width: 30%;
+    width: 40%;
 }
-.containerLogin .btnEnviar{
+.containerForm .btnEnviar{
     font-size: 1.5em;
-    margin: 0.5em;
-    padding: 0.5em;
-    padding-left: 3em;
-    padding-right: 3em;
+    margin: 0.5em auto;
+    padding: 0.3em;
+    width: 50%;
     border-radius: 0.5em;
     color: #fff;
     background-color: var(--color-secundario);
 }
-.containerLogin .btnEnviar:hover{   
+.containerForm .btnEnviar:hover{   
     background-color: var(--color-secundario-sombra2);
+}
+.containerForm .ayuda{
+    margin: 0.3em;
+    font-size: 1em;
+    text-align: center;
+}
+#login{
+    width: 40%;
+    margin-bottom: 1.5em;
 }
 
 
+.register{
+    padding-top: 0em;
+    display: flex;
+    flex-direction: column;
+}
 
 /* ------- querie Mobile ------- */
 
