@@ -1329,79 +1329,124 @@ footer{
 
 /* ----- Pagina Log in ----- */
 
-.titulo, .parrafo, .formulario{
+.titulo{
+    font-size: 2em;
+    text-align: center;
+}
+.titulo, .parrafo{
     color: white;
 }
 .containerPrincipal{
     display: flex;
 }
 .containerBienvenida{
-    width: 55%;
-    margin: 4em;
+    width: 66%;
+    margin: 3em;
+    margin-top: 10em;
 }
-.containerBienvenida .titulo{
-    text-align: center;
-    font-size: 2em;
-}
-.containerBienvenida .parrafo{
+.containerBienvenida .containerTexto{
     padding-top: 1em;
     font-size: 1.3em;
 }
-.containerLogin{
+.containerForm{
     background-color: rgba(255, 255, 255, 0.2);
-    width: 45%;
+    width: 34%;
     border-radius: 1em;
     margin-top: 7em;
     margin-bottom: 10em;
-    margin-right: 2em;
+    margin-right: 3em;
+    
 }
-.containerLogin .formulario{
-    flex-direction: column;
+.containerForm .formulario{
     margin-left: 1.3em;
     margin-right: 1.3em;
 }
-.containerLogin .titulo{
+.containerForm .titulo{
     text-align: center;
     border-bottom: solid #fff;
-    padding: 1em;
+    padding: 0.4em;
     border-width: thin;
-    font-size: 1.4em;
 }
-.containerLogin form{
-    padding-top: 2em;
+.login{
+    padding-top: 1.5em;
+    display: flex;
+    flex-direction: column;
 }
-.containerLogin input{
-    margin-top: 1em;
-    margin-bottom: 1em;
+.containerForm form .subtitulo{
+    font-size: 1.2em;
+    color: white;
+    margin: 0.6em;
+    text-align: center;
+}
+.containerForm form .campos .subtitulo{
+    text-align: start;
+    padding-left: 17%;
+}
+.containerForm form p label{ 
+    font-weight: bold;
+}
+.containerForm .campos{
+    display:flex;
+    flex-direction: column;
+}
+.containerForm .campos input{
+    margin: 0em auto 1em;
+    text-align: center;
     height: 3em;
     width: 50%;
     background-color: inherit;
     border-radius: 0.5em;
-    border-style:   solid;
+    border-style: solid;
     border-width: thin;
     border-color:rgba(255, 255, 255);
 }
-.containerLogin ::placeholder{
+.containerForm .campos p label{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding-right: 20%;
+}
+.senialador{
+    padding-right: 15%;
+}
+.containerForm ::placeholder{
     color: rgba(255, 255, 255, 0.85);
-    padding-left: 1em;
 }
-.containerLogin img{
-    width: 30%;
+.containerForm form figure{
+    display: flex;
+    justify-content: center;
 }
-.containerLogin .btnEnviar{
-    font-size: 1.2em;
+#captcha{
+    width: 40%;
+}
+.containerForm .btnEnviar{
+    font-size: 1.5em;
+    margin: 0.5em auto;
     padding: 0.3em;
-    padding-left: 3em;
-    padding-right: 3em;
+    width: 50%;
     border-radius: 0.5em;
     color: #fff;
     background-color: var(--color-secundario);
 }
-.containerLogin .btnEnviar:hover{
+.containerForm .btnEnviar:hover{   
     background-color: var(--color-secundario-sombra2);
+}
+.containerForm .ayuda{
+    margin: 0.3em;
+    font-size: 1em;
+    text-align: center;
+}
+#login{
+    width: 40%;
+    margin-bottom: 1.5em;
 }
 
 
+.register{
+    padding-top: 0em;
+    display: flex;
+    flex-direction: column;
+}
 
 /* ------- querie Mobile ------- */
 
