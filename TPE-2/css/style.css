@@ -1436,6 +1436,10 @@ footer{
     font-size: 1em;
     text-align: center;
 }
+.containerForm p a{
+    color: white;
+    text-decoration: underline;
+}
 #login{
     width: 40%;
     margin-bottom: 1.5em;
