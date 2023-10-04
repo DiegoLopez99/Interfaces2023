@@ -541,7 +541,7 @@ body{
     min-width: 22%; 
     height: 250px;
     background-color: #151e2d9f;
-    border: solid 1px var(--color-acento);
+    /*border: solid 1px var(--color-acento);*/
     border-radius: 10px;
     align-items: center;
     margin-right: 14px;
@@ -634,7 +634,7 @@ body{
 }
 
 .card:hover{
-    box-shadow: 0 0 15px var(--color-acento);
+    box-shadow: 0 0 18px var(--color-acento);
 }
 
 .card:hover >  .imagenCard a img{
@@ -670,12 +670,10 @@ body{
 }
 
 .carrusel .btnScrollIzq,
-.carrusel .btnScrollDer,
-.carruselEscenarios .btnScrollDerecha,
-.carruselEscenarios .btnScrollIzquierda{
+.carrusel .btnScrollDer{
     position: absolute;
     border: none;
-    background-color: #CA1551;
+    background-color: var(--color-acento);
     font-size: 24px;
     height: 50px;
     width: 50px;
@@ -692,34 +690,28 @@ body{
 
 
 .carrusel .btnScrollIzq:hover,
-.carrusel .btnScrollDer:hover,
-.carruselEscenarios .btnScrollDerecha:hover,
-.carruselEscenarios .btnScrollIzquierda:hover{
-    background-color: #9E0A3C; 
+.carrusel .btnScrollDer:hover{
+    background-color: var(--color-acento-sombra2); 
 }
 
-.carrusel .btnScrollIzq,
-.carruselEscenarios .btnScrollIzquierda{
+.carrusel .btnScrollIzq{
     left: 0;
     margin-left: -25px;
 }
 
-.carrusel .btnScrollDer,
-.carruselEscenarios .btnScrollDerecha{
+.carrusel .btnScrollDer{
     right: 0;
     margin-right: -25px;
 }
 
-.containerCarrusel,
-.carruselEscenarios .containerCarruselEscenarios{
+.containerCarrusel{
     width: 100%;
     padding: 15px 0px;
     overflow: hidden;
     scroll-behavior: smooth;
 }
 
-.containerCarrusel .contCards,
-.containerCarruselEscenarios .containerImagenes{
+.containerCarrusel .contCards{
     display: flex;
     flex-wrap: nowrap;
 }
