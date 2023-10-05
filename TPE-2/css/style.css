@@ -1456,11 +1456,29 @@ footer{
     margin-bottom: 1.5em;
 }
 
-
+.signGoogle{
+    padding-top: 0.5em;
+    border-top: thin solid white;
+}
 .register{
-    padding-top: 0em;
+    padding-top: 1em;
     display: flex;
     flex-direction: column;
+}
+#deshacerSemantico{
+    padding-bottom: 1em;
+}
+#apellidoForm, #nombreForm{
+    padding-right: 20%;
+}
+#edadForm{
+    padding-right: 26%;
+}
+#confirmarForm{
+    padding-left: 5%;
+}
+#contraseñaForm{
+    padding-right: 13%;
 }
 
 /* ------- querie Mobile ------- */
