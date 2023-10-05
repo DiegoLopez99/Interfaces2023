@@ -141,7 +141,7 @@ body{
 }
 
 #containerBackgoundIndex{
-    height: 150vh;
+    height: 170vh;
 }
 
 .containerBackgound div{
@@ -1360,7 +1360,20 @@ footer{
 .containerForm .formulario{
     margin-left: 1.3em;
     margin-right: 1.3em;
+    /*display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;*/
 }
+
+.ocultar{
+    display: none;
+}
+
+.activar{
+    display: block;
+}
+
 .containerForm .titulo{
     text-align: center;
     border-bottom: solid #fff;
@@ -1380,7 +1393,7 @@ footer{
 }
 .containerForm form .campos .subtitulo{
     text-align: start;
-    padding-left: 17%;
+    margin-left: -0.7em;
 }
 .containerForm form p label{ 
     font-weight: bold;
@@ -1388,12 +1401,14 @@ footer{
 .containerForm .campos{
     display:flex;
     flex-direction: column;
+    width: 90%;
+    margin-left: 1.5em;
 }
 .containerForm .campos input{
-    margin: 0em auto 1em;
-    text-align: center;
+    margin-bottom: 15px; 
+    padding-left: 5px;
     height: 3em;
-    width: 50%;
+    width: 90%;
     background-color: inherit;
     border-radius: 0.5em;
     border-style: solid;
@@ -1402,13 +1417,8 @@ footer{
 }
 .containerForm .campos p label{
     display: flex;
-    justify-content: center;
-    margin: auto;
-    padding-right: 20%;
 }
-.senialador{
-    padding-right: 15%;
-}
+
 .containerForm ::placeholder{
     color: rgba(255, 255, 255, 0.85);
 }
@@ -1420,7 +1430,7 @@ footer{
     width: 40%;
 }
 .containerForm .btnEnviar{
-    font-size: 1.5em;
+    font-size: 1.4em;
     margin: 0.5em auto;
     padding: 0.3em;
     width: 50%;
@@ -1435,6 +1445,7 @@ footer{
     margin: 0.3em;
     font-size: 1em;
     text-align: center;
+    cursor: pointer;
 }
 .containerForm p a{
     color: white;

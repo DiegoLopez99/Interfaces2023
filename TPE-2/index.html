@@ -46,7 +46,7 @@
                     </div>
                 </div>
                 <div class="containerForm">
-                    <div class="formulario">
+                    <div class="formulario ocultar" id="login-formulario">
                         <h2 class="titulo">Iniciar Sesión</h2>
                         <form class="login" action="inicio.html">
                             <div class="campos">    
@@ -60,8 +60,40 @@
                             </figure>
                             <button type="submit" class="btnEnviar">Iniciar Sesión</button>
                             <p class="ayuda parrafo">¿Olvidaste tu contraseña?</p>
-                            <p class="ayuda parrafo">¿No tienes cuenta? <a href="register.html"> Registrate</a>.</p>
+                            <p class="ayuda parrafo" id="btn-login">¿No tienes cuenta? Registrate.</p>
                             <h3 class="subtitulo">O inicia con</h3>
+                            <figure>
+                                <img src="/img/Pagina Login-Register/login.jpeg" alt="Login with google" id="login">
+                            </figure>
+                        </form>
+                    </div>
+                    <div class="formulario" id="registro-formulario">
+                        <h2 class="titulo">Registrarse</h2>
+                        <form class="register" action="login.html">
+                            <div class="campos">
+                                <h3 class="subtitulo">Datos personales</h3>    
+                                <p class="parrafo"><label>Nombre</label></p>
+                                <input type="text" name="nombre" id="nombreUsuario" required minlength="4" placeholder="Nombre">
+                                <p class="parrafo"><label>Apellido</label></p>
+                                <input type="password" name="contraseña" id="contraseña" required minlength="6" placeholder="Contraseña">
+                                <p class="parrafo"><label>Edad</label></p>
+                                <input type="number" name="edad" id="edad" required placeholder="Edad">
+                                <h4 class="subtitulo">Cuenta</h4>
+                                <p class="parrafo"><label>Direccion de correo</label></p>
+                                <input type="email" name="email" id="email" placeholder="Direccion de correo">
+                                <p class="parrafo"><label>Nombre de Usuario</label></p>
+                                <input type="text" name="nombreUsuario" id="nombreUsuario" placeholder="Nombre de Usuario">
+                                <p class="parrafo"><label>Contraseña</label></p>
+                                <input type="password" name="contraseña" id="contraseña" placeholder="Contraseña">
+                                <p class="parrafo"><label>Confirmar Contraseña</label></p>
+                                <input type="password" name="confirmarContraseña" id="confirmarContraseña" placeholder="Confirmar Contraseña">
+                            </div>
+                            <figure>
+                                <img src="/img/Pagina Login-Register/captcha.png" alt="Captcha" id="captcha">
+                            </figure>
+                            <button type="submit" class="btnEnviar">Registrarse</button>
+                            <p class="ayuda parrafo" id="btn-registro">¿Ya tienes tu cuenta? Inicia Sesión.</p>
+                            <h3 class="subtitulo">O registrate con</h3>
                             <figure>
                                 <img src="/img/Pagina Login-Register/login.jpeg" alt="Login with google" id="login">
                             </figure>
