@@ -232,7 +232,6 @@ body{
     transition: all 300ms;
     
 }
-
 .menuLogo{
     display: flex;
 }
@@ -1798,4 +1797,34 @@ footer{
         height: 12px;
     }
     
+
+    /* INDEX */
+
+    .contenidoPagLogin,.containerPrincipal{
+        display: flex;
+        flex-direction: column;
+    }
+    .containerBienvenida h1{
+        text-align: center;
+        font-size: 1em;
+        padding: 0px;
+        margin: 0px;
+    }
+    .containerBienvenida{
+        width: auto;
+        margin: 1em;
+        margin-top: 2em;
+    }
+    .containerTexto{
+        display: none;
+    }
+    .containerForm{
+        display: flex;
+        align-items: center;
+        width: auto;
+        margin: 3em 3em;
+    }
+    .containerForm {
+        font-size: 0.8em;
+    }
 }
