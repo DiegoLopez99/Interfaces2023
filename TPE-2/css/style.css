@@ -131,7 +131,7 @@ body{
 /*---- Backgorund-----*/
 
 .containerBackgound{
-    height: 410vh;
+    height: 355vh;
     width: 100%;
     position: absolute;
     left: 0;
@@ -141,7 +141,7 @@ body{
 }
 
 #containerBackgoundIndex{
-    height: 190vh;
+    height: 180vh;
 }
 
 .containerBackgound div{
@@ -1546,6 +1546,11 @@ footer{
 }
 #login{
     width: 40%;
+    
+    margin-bottom: 1.5em;
+}
+#register{
+    width: 50%;
     margin-bottom: 1.5em;
 }
 
@@ -1578,6 +1583,9 @@ footer{
 
 
 @media only screen and (max-width: 768px){
+    #containerBackgoundIndex{
+        height: 170vh;
+    }
 
     .containerNavbar{
         height: 60px;
@@ -1920,5 +1928,31 @@ footer{
     }
     .containerForm {
         font-size: 0.8em;
+    }
+
+    /* INICIO */
+    
+    .containerInicio .seccionRecomendadoParaTi{
+        display: none;
+    }
+    
+    .containerInicio{
+        display: flex;
+        flex-direction: column;
+    }
+    .containerInicio .seccionEstreno{
+        justify-content: center;
+        width: 100%;
+    }
+    .containerInicio .seccionDestacada{
+        padding-bottom: 1em;
+    }
+
+    .containerInicio .seccionEstreno h1{
+        text-align: center;
+    }
+
+    .card , .cardGenero{
+        width: 20%;
     }
 }
