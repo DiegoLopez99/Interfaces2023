@@ -131,7 +131,7 @@ body{
 /*---- Backgorund-----*/
 
 .containerBackgound{
-    height: 400vh;
+    height: 410vh;
     width: 100%;
     position: absolute;
     left: 0;
@@ -141,7 +141,7 @@ body{
 }
 
 #containerBackgoundIndex{
-    height: 170vh;
+    height: 190vh;
 }
 
 .containerBackgound div{
@@ -643,22 +643,15 @@ body{
 
 /* ---------- Carrusel ------------ */
 
-.recomendadoParaTi{
-    margin-top: 30px;
-    border-radius: 10px;
-    padding-top: 10px;
-}
 
 .JuegosGenero{
     margin-top: 20px;
-    border-radius: 10px;
     padding-top: 10px;
 }
 
 .titulo h4{
     color: #fff;
     font-size: 20px;
-    margin-left: 15px;
 }
 
 .carrusel,
@@ -843,6 +836,107 @@ footer{
 
 .cardFooter .descripcionCard .descripcion .correo:hover{
     color: var(--color-acento-sombra3);
+}
+
+.seccionDestacada{
+    width: 100%;
+    display: flex;
+}
+
+.seccionEstreno{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.seccionEstreno h1{
+    font-size: 36px;
+    color: #fff;
+}
+
+.seccionEstreno .card4enLinea{
+    width: 70%;
+    background-color: #151e2d9f;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 300ms ease-out;
+    margin-top: 15px;
+}
+
+.seccionEstreno .card4enLinea:hover{
+    box-shadow: 0 0 22px var(--color-acento);
+}
+
+.card4enLinea:hover >  .imgCard img{
+    transform: scale(1.1);
+}
+
+.card4enLinea .imgCard{
+    width: 90%;
+    height: 220px;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card4enLinea .imgCard img{
+    width: 100%;
+    height: 100%;
+    transition: all 350ms ease-out;
+}
+
+.card4enLinea .descripCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+
+.card4enLinea .descripCard h4{
+    font-size: 20px;
+    color: #fff;
+    margin-top: 5px;
+}
+
+.card4enLinea .descripCard .btnJugar4Linea{
+    font-size: 20px;
+    color: #fff;
+    background-color: var(--color-acento);
+    padding: 5px 48px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 300ms ease-out;
+}
+
+.card4enLinea .descripCard .btnJugar4Linea:hover{
+    background-color: var(--color-acento-sombra2);
+}
+
+.seccionRecomendadoParaTi{
+    width: 50%;
+}
+
+.contenedorCardsRecomendadas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#cardRecomendada{
+    width: 45%; 
+    margin: 15px; 
+
+}
+
+.tituloSeccion{
+    color: #fff;
 }
 
 /*-------- Pagina de Juego ---------*/

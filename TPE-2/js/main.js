@@ -7,54 +7,12 @@ addEventListener("DOMContentLoaded", (e) => {
     setTimeout(function(){
         loader.classList.add('cerrarLoader');
         containerSitio.classList.add('activarSitio')
-    }, 5000);
-
-    // ------- Formulario registro login-------
-
-    let formLogin = document.querySelector("#login-formulario");
-    let formRegistro = document.querySelector("#registro-formulario");
-
-    document.getElementById('btn-login').addEventListener('click', function(){
-        if(formLogin.classList.contains("ocultar")){
-            formLogin.classList.remove("ocultar");
-            formLogin.classList.add("activar");
-            formRegistro.classList.remove("activar");
-            formRegistro.classList.add("ocultar");
-        }else if(formLogin.classList.contains("activar")){
-            formLogin.classList.remove("activar");
-            formLogin.classList.add("ocultar");
-            formRegistro.classList.remove("ocultar");
-            formRegistro.classList.add("activar");
-        }else{
-            formLogin.classList.add("activar");
-            formRegistro.classList.remove("activar");
-            formRegistro.classList.add("ocultar");
-        }
-    });
-    
-    document.getElementById('btn-registro').addEventListener('click', function(){
-        if(formRegistro.classList.contains("ocultar")){
-            formRegistro.classList.remove("ocultar");
-            formRegistro.classList.add("activar");
-            formLogin.classList.remove("activar");
-            formLogin.classList.add("ocultar");
-        }else if(formRegistro.classList.contains("activar")){
-            formRegistro.classList.remove("activar");
-            formRegistro.classList.add("ocultar");
-            formLogin.classList.remove("ocultar");
-            formLogin.classList.add("activar");
-        }else{
-            formRegistro.classList.add("ocultar");
-            formLogin.classList.remove("ocultar");
-            formLogin.classList.add("activar");
-
-        }
-    });
+    }, 5000);  
 
 
     // ------ Menu y carrito-------
     document.querySelector(".btnMenu").addEventListener("click", btnToggle);
-    document.querySelector(".btnCarrito").addEventListener("click", btnToggleCarrito)
+    document.querySelector(".btnCarrito").addEventListener("click", btnToggleCarrito);
 
     let icono = document.querySelector("#iconoMenu");
     let menu = document.querySelector(".menu");
@@ -70,7 +28,7 @@ addEventListener("DOMContentLoaded", (e) => {
             icono.classList.remove("fa-xmark");
             icono.classList.add("fa-bars");     
         }
-        menu.classList.toggle("activar")
+        menu.classList.toggle("activar");
     }
 
     function btnToggleCarrito(){
@@ -82,7 +40,7 @@ addEventListener("DOMContentLoaded", (e) => {
             iconoCarrito.classList.remove("fa-xmark");
             iconoCarrito.classList.add("fa-cart-shopping");     
         }
-        carrito.classList.toggle("activar")
+        carrito.classList.toggle("activar");
     }
 
     // ------ Carrusel Inicio ------
