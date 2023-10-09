@@ -42,4 +42,29 @@ addEventListener("DOMContentLoaded", (e) => {
             }
         });
 
+        let formulario = document.querySelector(".register");
+        let botonRegistro = document.querySelector("#botonRegistro");
+        let icon = document.querySelector("#iconoBoton");
+        let btnText = document.querySelector(".btn-text");
+
+
+        function animacionBotonRegistro(event) {
+            alert("hola")
+            event.preventDefault();
+            botonRegistro.style.cursor = "wait";
+            btnText.textContent = "";
+            icon.classList.add("fa-circle-notch");
+
+            setTimeout(() => {
+                botonRegistro.style.pointerEvents = "none";
+                btnText.textContent = "Registrado correctamente";
+                icon.classList.replace("fa-circle-notch", "fa-check");
+                setTimeout(() => {
+                    formulario.submit(); // Envía el formulario manualmente
+                }, 2000);
+            }, 3000);
+        }
+
+        formulario.addEventListener("submit", animacionBotonRegistro);
+
 });

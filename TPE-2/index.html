@@ -61,7 +61,9 @@
                             <figure>
                                 <img src="/img/Pagina Login-Register/captcha.png" alt="Captcha" id="captcha">
                             </figure>
-                            <button type="submit" class="btnEnviar">Iniciar Sesión</button>
+                            <button type="submit" class="btnEnviar" id="botonLogin">
+                                <span>Iniciar Sesión</span>
+                            </button>
                             <p class="ayuda parrafo"><a>¿Olvidaste tu contraseña?</a></p>
                             <p class="ayuda parrafo" id="btn-login">¿No tienes cuenta? <a>Registrate.</a></p>
                             <div class="signGoogle">            
@@ -74,13 +76,13 @@
                     </div>
                     <div class="formulario" id="registro-formulario">
                         <h2 class="titulo">Registrarse</h2>
-                        <form class="register" action="login.html">
+                        <form class="register" action="inicio.html" method="post">
                             <div class="campos">
                                 <h3 class="subtitulo">Datos personales</h3>    
                                 <p class="parrafo"><label>Nombre</label></p>
                                 <input type="text" name="nombre" id="nombreUsuario" required minlength="4" placeholder="Nombre">
                                 <p class="parrafo"><label>Apellido</label></p>
-                                <input type="password" name="contraseña" id="contraseña" required minlength="6" placeholder="Contraseña">
+                                <input type="password" name="apellido" id="contraseña" required minlength="6" placeholder="Apellido">
                                 <p class="parrafo"><label>Edad</label></p>
                                 <input type="number" name="edad" id="edad" required placeholder="Edad">
                                 <h4 class="subtitulo">Cuenta</h4>
@@ -96,7 +98,10 @@
                             <figure>
                                 <img src="/img/Pagina Login-Register/captcha.png" alt="Captcha" id="captcha">
                             </figure>
-                            <button type="submit" class="btnEnviar">Registrarse</button>
+                            <button type="submit" class="btnEnviar" id="botonRegistro">
+                                <span class="btn-text">Registrarse</span>
+                                <i class="fas " id="iconoBoton"></i>
+                            </button>
                             <p class="ayuda parrafo" id="btn-registro">¿Ya tienes tu cuenta? <a> Inicia Sesión.</a></p>
                             <div class="signGoogle">
                                 <h3 class="subtitulo">O registrate con</h3>

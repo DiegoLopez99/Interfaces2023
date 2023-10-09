@@ -1532,6 +1532,29 @@ footer{
     color: #fff;
     background-color: var(--color-secundario);
 }
+
+.btnEnviar .fa-check{
+    border: solid 1px #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 1.1em;
+    line-height: 30px;
+}
+
+.btnEnviar .fa-circle-notch{
+    animation: animateBtn 1s ease infinite;
+}
+
+@keyframes animateBtn {
+    0%{
+        transform: rotate(0turn);
+    }
+    100%{
+        transform: rotate(1turn);
+    }
+}
+
 .containerForm .btnEnviar:hover{   
     background-color: var(--color-secundario-sombra2);
 }
