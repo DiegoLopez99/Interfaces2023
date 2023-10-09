@@ -131,7 +131,7 @@ body{
 /*---- Backgorund-----*/
 
 .containerBackgound{
-    height: 355vh;
+    height: 420vh;
     width: 100%;
     position: absolute;
     left: 0;
@@ -841,6 +841,7 @@ footer{
 .seccionDestacada{
     width: 100%;
     display: flex;
+    margin-bottom: 45px;
 }
 
 .seccionEstreno{
@@ -1587,6 +1588,10 @@ footer{
         height: 170vh;
     }
 
+    .containerBackgound{
+        height: 335vh;
+    }
+
     .containerNavbar{
         height: 60px;
         padding-left: 8px;
@@ -1616,6 +1621,52 @@ footer{
         width: 100%;
         top: 60px;
     }
+
+    .carrito{
+        width: 100%;
+        top: 60px;
+        height: 500px;
+    }
+    /*-----------------*/
+    
+    .tituloCarrito h4{
+        font-size: 24px;
+        margin-left: 10px;
+    }
+    
+    .carrito .detalle .item{
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 15px;
+    }
+    
+    .item .imagenItem{
+        width: 100px;
+        height: 70px;
+    }
+    
+    
+    .item .descripItem{
+        font-size: 18px;
+    }
+    
+    .item .btnBorrar{
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+    
+    .opcionesCarrito h6{
+        font-size: 18px;
+        margin-left: 10px;
+    }
+    
+    .opcionesCarrito .btnComprarCarrito{
+        margin-right: 10px;
+        font-size: 18px;
+    }
+
+    /*---------*/
     
     .nombreUsuario{
         font-size: 18px;
@@ -1649,39 +1700,9 @@ footer{
         margin-bottom: 10px;
     }
     
-    .containerProxEstreno{
-        width: 100%;
-        height: 200px;
-    }
-
-    .containerProxEstreno .descripcion h1{
-        font-size: 18px;
-    }
-    
-    .containerProxEstreno .descripcion a{
-        font-size: 16px;
-    }
-
-    .containerProxEstreno .descripcion{
-        width: 60%;
-        margin-left: 12px;
-        margin-bottom: 10px;
-    }
-
-    .containerProxEstreno .imagenProtagonistas{
-        height: 125%;
-        width: 45%;
-        margin-right: -15px;
-        margin-top: -10px;
-    }
-    
-    
-    .containerProxEstreno .imagenLogo{
-        width: 55%;
-    }
 
     .card{
-        min-width: 150px; 
+        min-width: 200px; 
         height: 160px;
         border-radius: 5px;
         margin-right: 0px;
@@ -1690,107 +1711,50 @@ footer{
         scroll-snap-align: center;
     }
     
-    .cardGenero{
-        min-width: 100px; 
-        height: 130px;
-    }
-    
-    
-    .card a img{
-        width: 100%;
-        height: 60%;
+    .card .imagenCard{
+        width: 95%;
+        height: 65%;
         border-radius: 5px;
+        margin-top: 5px;
     }
     
-    .card .capa{
-        display: flex;
-        flex-direction: column;
+    .card .imagenCard a img{
         width: 100%;
-        height: 40%;
-        position: relative;
-        align-items: flex-start;
-        justify-content: flex-start;
-        opacity: 1;
-        visibility: visible;
-        background-color: #072064;
-        margin-top: -5px;
-    }
-    
-    .card .capa h6{
-        font-size: 12px;
-        margin-bottom: 1px;
-    }
-    
-    .cardGenero .capa h6{
-        font-size: 10px;
-        margin-bottom: 1px;
-    }
-    
-    .card .capa .agregarCarrito{
-        flex-direction: column;
-    }
-    .card .capa .agregarCarrito button{
-        padding: 2px 5px;
-        font-size: 10px;
-        border-radius: 3px;
-    }
-    
-    .cardGenero .capa .agregarCarrito button{
-        padding: 2px 5px;
-        font-size: 8px;
-    }
-    
-    
-    .card .capa .agregarCarrito p{
-        font-size: 10px;
-        padding: 0px;
-    }
-    
-    .cardGenero .capa .agregarCarrito p{
-        font-size: 8px;
-    }
-    
-    .card .capa button{
-        padding: 2px 8px;
-        font-size: 10px;
-        color: #fff;
-    }
-    
-    .card .capa a{
-        padding: 2px 8px;
-        font-size: 12px;
-    }
-    
-    .cardGenero .capa button{
-        padding: 2px 5px;
-        font-size: 8px;
-    }
-    
-    .card .etiquetaGratis{
-        position: absolute;
-        top: 0;
-        right: 0;
-        margin-top: 3px;
-        margin-right: -23px;
-    }
-    
-    .card .etiquetaGratis p{
-        color: #fff;
-        padding: 1px 25px;
-        font-size: 8px;
-        background-color: #27BF17;
-        transform: rotate(35deg);
+        height: 100%;
     }
 
-    .recomendadoParaTi{
-        margin-top: 10px;
-        border-radius: 5px;
-        padding-top: 3px;
-        padding-bottom: 5px;
+    .card .descripCard{
+        height: 35%;
+    }
+
+    .card .descripCard h6{
+        font-size: 14px;
+    }
+
+    .card .descripCard .etiquetaBoton {
+        display: flex;
+        align-items: center;
+        /*justify-content: center;*/
+    }
+
+    .card .descripCard .etiquetaBoton .etiquetaPago p,
+    .card .descripCard .etiquetaBoton .etiquetaGratis p{
+        padding: 2px 6px;
+        font-size: 11px;
+    }
+
+    .card .descripCard .etiquetaBoton .btnPlay,
+    .card .descripCard .etiquetaBoton a{
+        padding: 2px 8px;
+        font-size: 12px;
+    }
+    
+    .card .descripCard .etiquetaBoton .agregadoCarrito{
+        padding: 2px 6px;
+        font-size: 12px;
     }
     
     .JuegosGenero{
-        background-color: #072064;
         margin-top: 7px;
         border-radius: 5px;
         padding-top: 3px;
@@ -1798,8 +1762,7 @@ footer{
     }
     
     .titulo h4{
-        font-size: 14px;
-        margin-left: 4px;
+        font-size: 20px;
     }
 
     .containerCarrusel{
@@ -1820,6 +1783,42 @@ footer{
         display: none;
     }
 
+    .seccionDestacada{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 45px;
+    }
+    
+    .seccionEstreno{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .seccionEstreno h1{
+        font-size: 26px;
+    }
+    
+    .contenedorCardsRecomendadas{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    
+    .seccionRecomendadoParaTi{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .seccionRecomendadoParaTi .tituloSeccion{
+        font-size: 22px;
+    }
+    #cardRecomendada{
+        width: 45%; 
+        margin: 10px; 
+    
+    }
     footer{
         height: auto;
 
@@ -1829,18 +1828,18 @@ footer{
         display: flex;
         width: 98%;
         margin: auto;
-        margin-top: 10px;
-        margin-bottom: 10px;
+        margin-top: 15px;
+        margin-bottom: 15px;
         justify-content: space-between;
         align-items: center;
     }
     
     .cardFooter{
-        width: 100px;
+        width: 128px;
         height: 120px;
-        padding: 4px;
+        padding: 3px;
         border: none;
-        background-color: #021344;
+        background-color: var(--color-acento-sombra2);
         border-radius: 5px;
         box-shadow: none;
     }
@@ -1861,7 +1860,7 @@ footer{
     
     
     .cardFooter .descripcionCard .titulo{
-        font-size: 12px;
+        font-size: 14px;
         margin-top: 4px;
     }
     
@@ -1873,7 +1872,7 @@ footer{
     
     .cardFooter .descripcionCard .descripcion a,
     .cardFooter .descripcionCard .descripcion p{
-        font-size: 8px;
+        font-size: 10px;
 
     }
     
@@ -1891,7 +1890,7 @@ footer{
     }
     
     .cardFooter .descripcionCard .descripcion .correo {
-        font-size: 6px;
+        font-size: 8px;
         margin-top: 2px;
     }
 
@@ -1932,27 +1931,4 @@ footer{
 
     /* INICIO */
     
-    .containerInicio .seccionRecomendadoParaTi{
-        display: none;
-    }
-    
-    .containerInicio{
-        display: flex;
-        flex-direction: column;
-    }
-    .containerInicio .seccionEstreno{
-        justify-content: center;
-        width: 100%;
-    }
-    .containerInicio .seccionDestacada{
-        padding-bottom: 1em;
-    }
-
-    .containerInicio .seccionEstreno h1{
-        text-align: center;
-    }
-
-    .card , .cardGenero{
-        width: 20%;
-    }
 }
