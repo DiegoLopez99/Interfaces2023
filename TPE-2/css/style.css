@@ -913,11 +913,32 @@ footer{
     margin-bottom: 20px;
     border-radius: 5px;
     cursor: pointer;
-    transition: all 300ms ease-out;
+    position: relative;
+    overflow: hidden;
+    transition: all 450ms ease;
 }
 
-.card4enLinea .descripCard .btnJugar4Linea:hover{
+.card4enLinea .descripCard .btnJugar4Linea span{
+    position: relative;
+    z-index: 2;
+    transition: 450ms ease all;
+}
+
+.card4enLinea .descripCard .btnJugar4Linea::after{
+    content: "";
+    width: 100%;
+    height: 300px;
     background-color: var(--color-acento-sombra2);
+    position: absolute;
+    left: 0;
+    top: -300px;
+    z-index: 1;
+    transition: 450ms ease-in-out all;
+    border-radius: 0px 0px 300px 300px;
+}
+
+.card4enLinea .descripCard .btnJugar4Linea:hover::after{
+    top: 0;
 }
 
 .seccionRecomendadoParaTi{
