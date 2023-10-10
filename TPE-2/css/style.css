@@ -1508,6 +1508,7 @@ footer{
     border-style: solid;
     border-width: thin;
     border-color:rgba(255, 255, 255);
+    color: #fff;
 }
 .containerForm .campos p label{
     display: flex;

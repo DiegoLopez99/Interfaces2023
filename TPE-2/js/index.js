@@ -49,7 +49,6 @@ addEventListener("DOMContentLoaded", (e) => {
 
 
         function animacionBotonRegistro(event) {
-            alert("hola")
             event.preventDefault();
             botonRegistro.style.cursor = "wait";
             btnText.textContent = "";
