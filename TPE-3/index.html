@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/e8e83e6023.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
+    <title>DT Games</title>
+</head>
+<body>
+    <div class="containerBackgound" id="containerBackgoundIndex">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <header>
+        <div class="containerNavbar">
+            <div class="menuLogo">
+                <a href="inicio.html">
+                    <div class="logo">
+                        <i class="fa-solid fa-gamepad"></i>
+                        <h6 class="tituloLogo">DT Games</h6>   
+                    </div>
+                </a>
+            </div>
+            
+        </div>
+    </header>
+    <div class="contenidoPagLogin">
+        <section>
+            <div class="containerPrincipal">    
+                <div class="containerBienvenida">
+                    <div class="titulo">
+                        <h1 class="titulo">¡UNETE A LA FAMILIA DT GAMES!</h1>
+                    </div>
+                    <div class="containerTexto">
+                        <p class="parrafo">
+                            Te damos la bienvenida a DT GAMES. Al registrarte podras tener libre acceso 
+                            a juegos exclusivos, en los cuales podras divertirte sin parar. Contamos 
+                            con una gran comunidad, ¡No esperes mas y unete a nosotros!
+                        </p>
+                    </div>
+                </div>
+                <div class="containerForm">
+                    <div class="formulario ocultar" id="login-formulario">
+                        <h2 class="titulo">Iniciar Sesión</h2>
+                        <form class="login" action="inicio.html">
+                            <div class="campos">    
+                                <p class="parrafo"><label>Nombre de usuario</label></p>
+                                <input type="text" name="nombre" id="nombreUsuario" required minlength="4" placeholder="Nombre de Usuario">
+                                <p class="parrafo senialador"><label>Contraseña</label></p>
+                                <input type="password" name="contraseña" id="contraseña" required minlength="6" placeholder="Contraseña">
+                            </div>
+                            <figure>
+                                <img src="/img/Pagina Login-Register/captcha.png" alt="Captcha" id="captcha">
+                            </figure>
+                            <button type="submit" class="btnEnviar" id="botonLogin">
+                                <span>Iniciar Sesión</span>
+                            </button>
+                            <p class="ayuda parrafo"><a>¿Olvidaste tu contraseña?</a></p>
+                            <p class="ayuda parrafo" id="btn-login">¿No tienes cuenta? <a>Registrate.</a></p>
+                            <div class="signGoogle">            
+                                <h3 class="subtitulo">Otro metodo</h3>
+                                <figure>
+                                    <img src="/img/Pagina Login-Register/login.jpeg" alt="Login with google" id="login">
+                                </figure>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="formulario" id="registro-formulario">
+                        <h2 class="titulo">Registrarse</h2>
+                        <form class="register" action="inicio.html">
+                            <div class="campos">
+                                <p class="parrafo"><label>Nombre</label></p>
+                                <input type="text" name="nombre" id="nombreUsuario" required minlength="4" placeholder="Nombre">
+                                <p class="parrafo"><label>Apellido</label></p>
+                                <input type="parrafo" name="apellido" id="contraseña" required minlength="6" placeholder="Apellido">
+                                <p class="parrafo"><label>Edad</label></p>
+                                <input type="number" name="edad" id="edad" required placeholder="Edad">
+                                <p class="parrafo"><label>Direccion de correo</label></p>
+                                <input type="email" name="email" id="email" placeholder="Direccion de correo">
+                                <p class="parrafo"><label>Nombre de Usuario</label></p>
+                                <input type="text" name="nombreUsuario" id="nombreUsuario" placeholder="Nombre de Usuario">
+                                <p class="parrafo"><label>Contraseña</label></p>
+                                <input type="password" name="contraseña" id="contraseña" placeholder="Contraseña">
+                                <p class="parrafo"><label>Confirmar Contraseña</label></p>
+                                <input type="password" name="confirmarContraseña" id="confirmarContraseña" placeholder="Confirmar Contraseña">
+                            </div>
+                            <figure>
+                                <img src="/img/Pagina Login-Register/captcha.png" alt="Captcha" id="captcha">
+                            </figure>
+                            <button type="submit" class="btnEnviar" id="botonRegistro">
+                                <span class="btn-text">Registrarse</span>
+                                <i class="fas " id="iconoBoton"></i>
+                            </button>
+                            <p class="ayuda parrafo" id="btn-registro">¿Ya tienes tu cuenta? <a> Inicia Sesión.</a></p>
+                            <div class="signGoogle">
+                                <h3 class="subtitulo">O registrate con</h3>
+                                <figure>
+                                    <img src="/img/Pagina Login-Register/register.png" alt="Register with google" id="register">
+                                </figure>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W3VK1DERSQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W3VK1DERSQ');
+    </script>
+    <footer>
+        <div class="contcardsFooter">
+            <div class="cardFooter">
+                <div class="imgFooter">
+                    <img src="img/Imagenes Footer/Imagen1.png" alt="">
+                </div>
+                <div class="descripcionCard">
+                    <div class="titulo">
+                        <h5>Navegacion del Sitio</h5>
+                    </div>
+                    <div class="descripcion">
+                        <ul>
+                            <li><a href="">Inicio</a></li>
+                            <li><a href="">Mis Juegos</a></li>
+                            <li><a href="">Categorias</a></li>
+                            <li><a href="">Novedades</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="cardFooter">
+                <div class="imgFooter">
+                    <img src="img/Imagenes Footer/imagen2.png" alt="">
+                </div>
+                <div class="descripcionCard">
+                    <div class="titulo">
+                        <h5>Blog</h5>
+                    </div>
+                    <div class="descripcion">
+                        <p><a href="">Unete a la comunidad</a></p>
+                        <p><a href="">Blog</a></p>
+                        <p><a href="">Foro</a></p>
+                        <p><a href="">¿Quienes Somos?</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="cardFooter">
+                <div class="imgFooter">
+                    <img src="img/Imagenes Footer/imagen3.png" alt="">
+                </div>
+                <div class="descripcionCard">
+                    <div class="titulo">
+                        <h5>Redes Sociales</h5>
+                    </div>
+                    <div class="descripcion">
+                        <p>Siguenos en nuestras redes sociales</p>
+                        <div class="iconosRedesSociales">
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-discord"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cardFooter">
+                <div class="imgFooter">
+                    <img src="img/Imagenes Footer/imagen4.png" alt="">
+                </div>
+                <div class="descripcionCard">
+                    <div class="titulo">
+                        <h5>¿Necesitas Ayuda?</h5>
+                    </div>
+                    <div class="descripcion">
+                        <p>Puedes contactar con nuestro soporte online.</p>
+                        <p>+54 2494 02 03 04</p>
+                        <p class="correo"><i class="fa-regular fa-envelope"></i> DTgames@gamil.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
