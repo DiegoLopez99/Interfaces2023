@@ -1025,7 +1025,7 @@ footer{
 .displayJuego .displayInstruc .videoJuego .video{
     width: 77%;
     border-radius: 15px;
-    height: 450px;
+    height: 500px;
     margin: 15px;
     margin-right: 0;
     overflow: hidden;
@@ -1444,9 +1444,11 @@ footer{
 
 /* ------ Estilos para menus Juego -------*/ 
 
-.contenedorMenusJuego{
+/*.contenedorMenusJuego{
     position: relative;
-}
+    width: 100%;
+    height: 100%;
+}*/
 
 .contenedorMenusJuego .filtro{
     position: absolute;
@@ -1462,14 +1464,14 @@ footer{
 
 .MenuInicioJuego{
     position: absolute;
-    width: 500px;
+    width: 600px;
     height: 500px;
     top: 100px;
     left: 50%;
     margin-left: -250px;
-    background-color: #9E0A3C;
+    background-color: var(--color-acento);
     border-radius: 20px;
-    border: solid 6px #7C002A;
+    border: solid 6px var(--color-acento-sombra2);
     z-index: 500;
     opacity: 0;
     visibility: hidden;
@@ -1478,7 +1480,13 @@ footer{
 .MenuInicioJuego .jugadores{
     display: flex;
     width: 100%;
-    height: 65%;
+    height: 100%;
+    margin-top: 10%;
+}
+
+.MenuInicioJuego #formJuego{
+    display: flex;
+    flex-direction: column;
 }
 
 .MenuInicioJuego .jugadores .jugador1,
@@ -1515,6 +1523,7 @@ footer{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 10%;
 }
 
 .MenuInicioJuego .opciones .cantFichas{
@@ -1531,7 +1540,8 @@ footer{
 .contenedorMenusJuego .menuReinicio button{
     font-size: 18px;
     padding: 6px 20px;
-    background-color: #18b201;
+    background-color: var(--color-primario-sombra1);
+    color: #fff;
     border-radius: 8px;
     cursor: pointer;
     transition: all 300ms;
@@ -1539,7 +1549,7 @@ footer{
 
 .MenuInicioJuego .opciones .contBtnComenzar button:hover,
 .contenedorMenusJuego .menuReinicio button:hover{
-    background-color: #0B7800;
+    background-color: var(--color-primario-sombra2);
 }
 
 .contenedorMenusJuego .menuReinicio{
@@ -1563,6 +1573,74 @@ footer{
 .contenedorMenusJuego .activar{
     opacity: 1;
     visibility: visible;
+}
+
+/*------ Estilos canvas y score juego-------*/
+
+#contenedorCanvas{
+    position: relative;
+}
+
+.displayJuego .displayInstruc .canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(253, 245, 141);
+}
+
+.canvas{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.mostrarCanvas,
+.score.mostrarScore{
+    opacity: 1;
+    visibility: visible;
+}
+
+.inactivo {
+    pointer-events: none;
+  }
+
+.score{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 500;
+}
+
+.score h1{
+    margin: 0 10px;
+}
+
+.score .timer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.score .timer p{
+    font-size: 20px;
+}
+
+.score .timer button{
+    font-size: 16px;
+    padding: 3px 8px;
+    background-color: rgb(252, 48, 48);
+    border-radius: 3px;
+    margin-left: 20px;
+    color: #fff;
+}
+
+.score .timer button:hover{
+    cursor: pointer;
+    background-color: rgb(250, 12, 12);
 }
 
 /* ----- Pagina Log in ----- */

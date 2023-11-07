@@ -13,38 +13,33 @@
     <title>DT Games</title>
 </head>
 <body>
-    <div class="filtro" id="filtro"></div>
+    <div class="contenedorMenusJuego">
+        <div class="filtro" id="filtro"></div>
         <div class="MenuInicioJuego" id="MenuInicioJuego">
-            <div class="jugadores">
-                <form action="submit" id="formJuego">
+            <form action="submit" id="formJuego">
+                <div class="jugadores">
                     <div class="jugador1">
                         <label for="nombreJugador1">Nombre Jugador 1</label>
-                        <input type="text" id="nombreJugador1" placeholder="Nombre">
-                        <label for="seleccionJugador1">Elija su seleccion</label>
+                        <input name="nombreJugador1" type="text" id="nombreJugador1" placeholder="Nombre">
+                        <label for="seleccionJugador1">Elija su superheroe Marvel</label>
                         <select name="seleccionJugador1" id="seleccionJugador1">
-                            <option value="argentina">Argentina</option>
-                            <option value="alemania">Alemania</option>
-                            <option value="brasil">Brasil</option>
-                            <option value="españa">España</option>
-                            <option value="francia">Francia</option>
-                            <option value="mexico">Mexico</option>
-                            <option value="paises-bajos">Paises Bajos</option>
-                            <option value="portugal">Portugal</option>
+                            <option value="capitanAmerica">Capitan America</option>
+                            <option value="spiderman">Spiderman</option>
+                            <option value="thor">Thor</option>
+                            <option value="hulk">Hulk</option>
+                            <option value="ironman">Ironman</option>
                         </select>
                     </div>
                     <div class="jugador2">
                         <label for="nombreJugador2">Nombre Jugador 2</label>
-                        <input type="text" id="nombreJugador2" placeholder="Nombre">
-                        <label for="seleccionJugador2">Elija su seleccion</label>
+                        <input name="nombreJugador2" type="text" id="nombreJugador2" placeholder="Nombre">
+                        <label for="seleccionJugador2">Elija su superheroe DC</label>
                         <select name="seleccionJugador2" id="seleccionJugador2">
-                            <option value="argentina">Argentina</option>
-                            <option value="alemania">Alemania</option>
-                            <option value="brasil">Brasil</option>
-                            <option value="españa">España</option>
-                            <option value="francia">Francia</option>
-                            <option value="mexico">Mexico</option>
-                            <option value="paises-bajos">Paises Bajos</option>
-                            <option value="portugal">Portugal</option>
+                            <option value="batman">Batman</option>
+                            <option value="flash">Flash</option>
+                            <option value="superman">Superman</option>
+                            <option value="mujerMaravilla">Mujer Maravilla</option>
+                            <option value="linternaVerde">Linterna Verde</option>
                         </select>
                     </div>
                 </div>
@@ -58,7 +53,7 @@
                         </select>
                     </div>
                     <div class="contBtnComenzar">
-                        <button class="btnComenzar" id="btnComenzar">Comenzar</button>
+                        <button class="btnComenzar" id="btnComenzar" type="submit">Comenzar</button>
                     </div>
                 </div>
             </form>
@@ -66,6 +61,7 @@
         <div class="menuReinicio" id="menuReinicio">
             <button class="reiniciar" id="reiniciar">ReiniciarJuego</button>
         </div>
+    </div>
     <header>
         <div class="containerNavbar">
             <div class="menuLogo">
@@ -170,7 +166,7 @@
             <a href="">4 en linea: Marvel vs DC</a>
         </div>
         <div class="displayJuego">
-            <div class="displayInstruc">
+            <div class="displayInstruc" id="contenedorCanvas">
                 <div class="videoJuego">
                     <div class="video">
                         <img src="img/Pagina Juego/Marvel vs DC.jpg" alt="">    
@@ -178,7 +174,7 @@
                     <div class="seccionPlay">
                         <h3>Marvel vs DC</h3>
                         <h5>Elegi tu Superheroe favorito y lucha para salvar el mundo!</h5>
-                        <button>Jugar <i class="fa-solid fa-play"></i></button>
+                        <button id="btnPlay">Jugar <i class="fa-solid fa-play"></i></button>
                     </div>
                 </div>
                 <div class="instrucciones">
@@ -190,6 +186,22 @@
                         <li>Finalizada la partida, se reinicia el tablero y se comienza de nuevo.</li>
                     </ul>
                 </div>
+                <div class="score">
+                    <h1 class="player">Jugador 1: <span id="nameJugador1Score"></span></h1>
+                    <div class="timer">
+                        <div>
+                            <p>Tiempo de juego:
+                                <span id="minute"></span>
+                                <span id="seconds"></span>
+                            </p>
+                        </div>
+                        <div>
+                            <button id="reset">Reiniciar</button>
+                        </div>
+                    </div>
+                    <h1 class="player">Jugador 2: <span id="nameJugador2Score"></span></h1>
+                </div>
+                <canvas id="canvas" class="canvas"></canvas>
             </div>
             <div class="socialJuego">
                 <div class="btnSocial" id="btnInteraccionJuego">
@@ -413,5 +425,9 @@
             </div>
         </div>
     </footer>
+    <script src="js/juego/Chip.js"></script>
+    <script src="js/juego/Player.js"></script>
+    <script src="js/juego/Zone.js"></script>
+    <script src="js/juego/juegoMain.js"></script>
 </body>
 </html>

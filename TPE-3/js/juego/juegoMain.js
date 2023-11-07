@@ -1,44 +1,48 @@
 "use strict";
-let form=document.querySelector("#form-mode");
-form.addEventListener("submit", cargar);
 
 function cargar(e){
     e.preventDefault();
+    filtro.classList.remove("activar");
+    menuIncio.classList.remove("activar");
     let formData= new FormData(form);
-    let mode=formData.get("mode");
-    let player1=formData.get("player1name");
-    let p1img=formData.get("p1img");
-    let player2=formData.get("player2name");
-    let p2img=formData.get("p2img");
+    let mode=formData.get("cantFichasGanar");
+    let player1=formData.get("nombreJugador1");
+    let p1img=formData.get("seleccionJugador1");
+    let player2=formData.get("nombreJugador2");
+    let p2img=formData.get("seleccionJugador2");
     load(mode,player1,p1img,player2,p2img)
 }
 
-
 function load(mode,player1name,imgP1,player2name,imgP2) {
-
+    //boton reinicio
     let btnReset = document.getElementById('reset');
     btnReset.addEventListener('click', reset);
+    //canvas
     let canvas = document.querySelector('#canvas');
-
-    var pos = canvas.getBoundingClientRect();
-    console.log(pos.top, pos.left)
-
+    let contenedorCanvas = document.querySelector("#contenedorCanvas"); 
+    canvas.classList.add("mostrarCanvas");
     /** @type {CanvasRenderingContext2D} */
     let ctx = canvas.getContext('2d');
-    let canvasWidth = canvas.width;
-    let canvasHeight = canvas.height;
+    let canvasHeight = contenedorCanvas.clientHeight;
+    let canvasWidth = contenedorCanvas.clientWidth;
+    canvas.height = canvasHeight;
+    canvas.width = canvasWidth;
+    //mostrar Score
+    document.querySelector('.score').classList.add('mostrarScore');
+    //agregar nombre jugadores a score
+    let spanName1 = document.querySelector("#nameJugador1Score"); 
+    let spanName2 = document.querySelector("#nameJugador2Score");
+    spanName1.textContent = player1name;
+    spanName2.textContent = player2name;
+
     let selectedChip = null;
     let figures = [];
     let board = [];
-    let imgBoard = 'images/boardCell.png';
-    let imgPlayer1 = 'images/theBoysPin.png';
-    let imgPlayer2 = 'images/theSeven.png';
+    let imgBoard = "./img/Fichas/boardCell.png";
+    let imgPlayer1 = "./img/Fichas/"+imgP1+".png";
+    let imgPlayer2 = "./img/Fichas/"+imgP2+".png";
     let inicioX = 0;
     let inicioY = 0;
-    // let initialCanvasX=parX;
-    // let initialCanvasY=parY;
-
-    //luego pasar por parametro
 
     let inLine = mode;
     let columns= Number(inLine)+3;
@@ -46,7 +50,6 @@ function load(mode,player1name,imgP1,player2name,imgP2) {
     let rows = Number(inLine)+2;
     console.log(rows);
     let maxChips = columns * rows;
-    let playedChips = 0;
 
     const SIZEPOSBOARD = 55;
     const SIZECHIP = 25;
@@ -64,15 +67,13 @@ function load(mode,player1name,imgP1,player2name,imgP2) {
     let chipsPlayed = 0;
 
     //ubicacion x y inicial del tablero
-
     let locationBoardX = (canvasWidth / 2) - (((columns) * SIZEPOSBOARD) / 2);
-    let locationBoardY = (canvasHeight / 2) - (((SIZEPOSBOARD) * (rows)) / 2);
+    let locationBoardY = (canvasHeight / 2) - (((SIZEPOSBOARD) * (rows)) / 2)+42;
 
-    //
     initEvents();
     initBoard();
 
-    //redibujar el canvas
+    //redibuja el canvas
     function redraw() {
         clearCanvas();
         
@@ -110,6 +111,7 @@ function load(mode,player1name,imgP1,player2name,imgP2) {
         console.log("figures: ", figures);
     }
 
+    //Inicia las fichas de cada jugador
     function initChips() {
         for (let i = 0; i < maxChips / 2; i++) {
             //fichas jugador1
@@ -165,45 +167,39 @@ function load(mode,player1name,imgP1,player2name,imgP2) {
     }
     //......................................................................................................
 
-
-    //eventos del main? o de la ficha???
+    //eventos del juego - mouse
     function initEvents() {
         canvas.addEventListener('mousedown', onMouseDown);
         canvas.addEventListener('mouseup', onMouseUp);
         canvas.addEventListener('mousemove', onMouseMove);
     }
 
+
     function onMouseDown(event) {
         if (playerTurn == 1) {//cambiar
             for (var i = 0; i < chipsPlayer1.length; i++) {
+                const rect = canvas.getBoundingClientRect(); // Obtener la posición del canvas
+                const mouseX = event.clientX - rect.left; // Coordenada X relativa al canvas
+                const mouseY = event.clientY - rect.top;  // Coordenada Y relativa al canvas
 
-                if (
-                    chipsPlayer1[i].isCliked(event.clientX + pos.left, event.clientY - pos.top)
-                ) {
-
+                if (chipsPlayer1[i].isCliked(mouseX, mouseY)) {
                     selectedChip = chipsPlayer1[i];
-                    inicioY = event.clientY - chipsPlayer1[i].y;
-                    console.log(inicioY);
-                    inicioX = event.clientX - chipsPlayer1[i].x;
-                    console.log(inicioX);
-
+                    inicioY = mouseY - chipsPlayer1[i].y;
+                    inicioX = mouseX - chipsPlayer1[i].x;
                 }
             }
 
         }
         else if (playerTurn == 2) {
             for (var i = 0; i < chipsPlayer2.length; i++) {
+                const rect = canvas.getBoundingClientRect(); // Obtener la posición del canvas
+                const mouseX = event.clientX - rect.left; 
+                const mouseY = event.clientY - rect.top;  
 
-                if (
-                    chipsPlayer2[i].isCliked(event.clientX + pos.left, event.clientY - pos.top)
-                ) {
-
+                if (chipsPlayer2[i].isCliked(mouseX, mouseY)) {
                     selectedChip = chipsPlayer2[i];
-                    inicioY = event.clientY - chipsPlayer2[i].y;
-                    console.log(inicioY);
-                    inicioX = event.clientX - chipsPlayer2[i].x;
-                    console.log(inicioX);
-
+                    inicioY = mouseY - chipsPlayer2[i].y;
+                    inicioX = mouseX - chipsPlayer2[i].x;
                 }
             }
         }
@@ -211,38 +207,39 @@ function load(mode,player1name,imgP1,player2name,imgP2) {
 
     function onMouseMove(event) {
         if (selectedChip != null) {
-            selectedChip.setX(event.clientX - inicioX);
-            selectedChip.setY(event.clientY - inicioY);
-            console.log(selectedChip);
+            const rect = canvas.getBoundingClientRect(); // Obtener la posición del canvas
+            const mouseX = event.clientX - rect.left;
+            const mouseY = event.clientY - rect.top;  
+    
+            selectedChip.setX(mouseX - inicioX);
+            selectedChip.setY(mouseY - inicioY);
         }
         redraw();
     }
 
-
     function onMouseUp(event) {
-        let insert = (selectedChip.getX() > locationBoardX && selectedChip.getX() < locationBoardX + widthBoard)
-            && (selectedChip.getY() < locationBoardY && selectedChip.getY() > locationBoardY - SIZEPOSBOARD * 2);
-        if (insert) {
-            insertChip(returnColumnNum(selectedChip.getX()), selectedChip);
-            changeTurn();
-        } else {
-            selectedChip.setX(selectedChip.getInitialX());
-            selectedChip.setY(selectedChip.getInitialY());
+        if (selectedChip != null) {
+            let insert = (selectedChip.getX() > locationBoardX && selectedChip.getX() < locationBoardX + widthBoard)
+                && (selectedChip.getY() < locationBoardY && selectedChip.getY() > locationBoardY - SIZEPOSBOARD * 2);
+    
+            if (insert) {
+                insertChip(returnColumnNum(selectedChip.getX()), selectedChip);
+                changeTurn();
+            } else {
+                selectedChip.setX(selectedChip.getInitialX());
+                selectedChip.setY(selectedChip.getInitialY());
+            }
+            selectedChip = null;
         }
-        selectedChip = null;
-        
     }
 
-
-
+    //Cambia el turno de los jugadores
     function changeTurn() {
         if (playerTurn == 1) {
             playerTurn = 2;
-
         }
         else if (playerTurn == 2) {
             playerTurn = 1;
-
         }
     }
 
@@ -261,7 +258,7 @@ function load(mode,player1name,imgP1,player2name,imgP2) {
         }
     }
 
-    //insertar ficha
+    //insertar ficha en el tablero
     function insertChip(numCol, chip) {
         const firstEmptyRow = getFirstEmptyRow(numCol);
 
@@ -289,12 +286,14 @@ function load(mode,player1name,imgP1,player2name,imgP2) {
         chip.setCanMove(false);
         setTimeout(() => {
             if (checkWinner()) {
+                console.log(chip.getPlayer());
                 alert("Ganador: " + chip.getPlayer().getName());
                 reset();
             };
-        }, 500)
+        }, 300)
     }
 
+    //Devuelve la primera fila libre de la columna
     function getFirstEmptyRow(numCol) {
         let i = 0;
         if (figures[i][numCol].isChipInside) {
@@ -411,7 +410,8 @@ function load(mode,player1name,imgP1,player2name,imgP2) {
             }
         }
     }
-
+    
+    //Resetea el juego
     function reset() {
         chipsPlayer1 = [];
         chipsPlayer2 = [];
@@ -425,11 +425,11 @@ function load(mode,player1name,imgP1,player2name,imgP2) {
         redraw();
     }
 
+    //Variables timer
     let minute = document.getElementById('minute');
     let second = document.getElementById('seconds');
     let min = 2;
     let sec = 59;
-
 
     setInterval(function restSec() {
         if (sec >= 0) {
@@ -449,7 +449,6 @@ function load(mode,player1name,imgP1,player2name,imgP2) {
 
     }, 60000);
 
-
     function checkFinished(){
         if(min== 0 && sec == -1){
             reset();
@@ -457,49 +456,16 @@ function load(mode,player1name,imgP1,player2name,imgP2) {
     }
 }
 
-//Inicia el juego
-/*function iniciarJuego(){
-    filtro.classList.remove("activar");
-    menuIncio.classList.remove("activar");
-    let seleccionJug1 = document.querySelector("#seleccionJugador1").value;
-    let seleccionJug2 = document.querySelector("#seleccionJugador2").value;
-    ganador = -1;
-    setJugadores();
-    crearTablero();
-    generarFichasJugador(1, "./img/Fichas/"+seleccionJug1+".png", 30 + (Math.random() * 150));
-    generarFichasJugador(2, "./img/Fichas/"+seleccionJug2+".png", (width-150) + (Math.random() * 150));
-    tablero.setCantFichasGanar();
-    tablero.iniciarTablero(width*0.3);
-    tablero.iniciarMatriz();
-    canvas.addEventListener('mousedown', onMouseDown, false);
-    canvas.addEventListener('mouseup', onMouseUp, false);
-    canvas.addEventListener('mousemove', onMouseMoved, false);
-    dibujarInicio();
-};
-
-//Reinicia el juego
-function reiniciarJuego(){
-    ganador = -1;
-    turno = 1;
-    fichas = [];
-    tablero.iniciarMatriz();
-    let seleccionJug1 = document.querySelector("#seleccionJugador1").value;
-    let seleccionJug2 = document.querySelector("#seleccionJugador2").value;
-    generarFichasJugador(1, "./img/Fichas/"+seleccionJug1+".png", 30 + (Math.random() * 150));
-    generarFichasJugador(2, "./img/Fichas/"+seleccionJug2+".png", (width-150) + (Math.random() * 150));
-    reubicarUltimaFicha();
-};*/
-
-//Muestra el canvas y el menu de inicio
-function mostrarJuego(){
-    canvas.classList.add("mostrarCanvas");
+//Muestra el menu del juego
+function mostrarMenuJuego(){
     filtro.classList.add("activar");
     menuIncio.classList.add("activar");
-
+    document.querySelector('.videoJuego').classList.add('inactivo');
+    document.querySelector('.instrucciones').classList.add('inactivo');
 };
 
+let form=document.querySelector("#formJuego");
 let filtro = document.querySelector('#filtro');
 let menuIncio = document.querySelector('#MenuInicioJuego');
-document.querySelector('#btnPlay').addEventListener("click", mostrarJuego);
-//document.querySelector('#btnComenzar').addEventListener("click", iniciarJuego);
-document.querySelector('#reiniciar').addEventListener("click", reiniciarJuego);
+document.querySelector('#btnPlay').addEventListener("click", mostrarMenuJuego);
+form.addEventListener("submit", cargar);
