@@ -162,7 +162,7 @@ header .btn-comprar:hover{
     background-image: url('./img/personajes/image\ 3.png');
 }
 .background-presentacion{
-    width: 100%;
+    width: 1263px;
     height: 845px;
     margin-top: -100px;
     z-index: 1;
@@ -335,9 +335,32 @@ header .btn-comprar:hover{
     z-index: 3;
     right: 20px;
     bottom: -65px;
-    background-image: url('./img/Untitled-2\ 2.png');
+    background-image: url('./img/personajes/Untitled-2\ 2.png');
 }
 
 .parallax-5{
-    
+    width: 441px;
+    height: 566px;    
+    transform: rotate(10deg) scaleX(-1);
+    top: 300px;
+    right: 290px;
+    position: absolute;
+    z-index: 3;
+    background-image: url('./img//personajes/panther.png');
+}
+
+.parallax-6{
+    width: 569px;
+    height: 675px;
+    left: 110px;
+    position: absolute;
+    z-index: 3;
+    background-image: url('./img/personajes/image\ 22\ 8\ \(1\).png');
+}
+
+.background-2{
+    width: 1260px;
+    height: 2195px;
+    position: absolute;
+
 }
