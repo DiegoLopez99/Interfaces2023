@@ -61,7 +61,7 @@ header .barras{
     transform: rotate(-45deg) translate(-4px, 4px);
 }
 
-header .btn-comprar{
+.btn-comprar{
     height: 50px;
     width: 200px;
     background-color: #FFE901;
@@ -80,7 +80,7 @@ header .btn-comprar{
     transition: transform 0.4s ease-in-out;
 }
 
-header .btn-comprar:hover{
+.btn-comprar:hover{
     transform: scale(1.1);
     background-color: #ffea01b6;
 }
@@ -449,5 +449,5 @@ header .btn-comprar:hover{
     margin-top: 20px;
     font-family: Lato;
     font-size: 18px;
+}
 
-}   
