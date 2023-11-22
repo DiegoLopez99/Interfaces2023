@@ -451,3 +451,178 @@ header .barras{
     font-size: 18px;
 }
 
+
+.container-comprar{
+    margin: auto;
+    margin-top: -180px;
+    flex-direction: column;
+}
+
+.container-comprar h5{
+    font-family: Lato;
+    font-size: 40px;
+    font-weight: 400;
+    width: 52%;
+    color: white;
+}
+
+.container-comprar .btn-comprar{
+    margin: 40px;
+    margin-left: 0px;
+    width: 250px;
+}
+
+.container-personajes{
+    width: 1263px;
+    height: 700px;
+    align-items: center;
+    position: relative;
+    justify-content: space-around;
+    background-image: url('../img/Rectangle\ 10.png');
+}
+
+.pre-footer{
+    width: 1263px;
+    height: 1296px;
+    margin-top: -10px;
+    background-size: cover;
+    position: relative;
+    z-index: 3;
+    background-image: url('../img/Rectangle\ 11.png');
+}
+
+.pre-footer h6{
+    font-family: Lato;
+    font-size: 60px;
+    width: 60%;
+    margin: auto;
+    padding-top: 150px;
+    padding-bottom: 35px; 
+    align-items: center;
+    text-align: center;
+}
+
+.subscribirse{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    width: fit-content;
+    margin: auto;
+    border-color: #2982ff;
+    border-width: 5px;
+    border-radius: 200px;
+}
+
+.pre-footer .text-input{
+    width: 500px;
+    height: 75px;
+    border-top-left-radius: 200px; /* Radio de la esquina superior izquierda */
+    border-bottom-left-radius: 200px; /* Radio de la esquina inferior izquierda */
+    border-top-right-radius: 0; /* Sin radio en la esquina superior derecha */
+    border-bottom-right-radius: 0; /* Sin radio en la esquina inferior derecha */
+    border-right: none; /* Borde derecho para la forma cortada */
+    border-style: none;
+    
+}
+
+.pre-footer .text-input::placeholder{
+    padding-left: 20px;
+    letter-spacing: 2px;
+    font-size: 15px;
+    font-family: Lato;
+}
+
+.pre-footer .btn-subscribirse{
+    width: 150px;
+    height: 75px;
+    background-color: #FFE901;
+    border-top-left-radius: 0px; /* Radio de la esquina superior izquierda */
+    border-bottom-left-radius: 0px; /* Radio de la esquina inferior izquierda */
+    border-top-right-radius: 200px; /* Sin radio en la esquina superior derecha */
+    border-bottom-right-radius: 200px; /* Sin radio en la esquina inferior derecha */
+    border-style: solid;
+    border-width: 5px;
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+    border-color: #2982ff;
+    font-family: Lato;
+    font-size: 15px;
+    font-weight: 500px;
+    font-weight: bold;
+}
+
+.container-condicion{
+    width: 50%;
+    margin: auto;
+    margin-top: 35px;
+}
+
+.pre-footer .text-subscribirse{
+    font-family: Lato;
+}
+
+#subrayado{
+    text-decoration: underline;
+}
+
+.fondo-pre-footer{
+    width: 1263px;
+    height: 720px;
+    position: absolute;
+    z-index: 2;
+    border-style: none;
+    background-image: url('../img/Footerimage.png');
+}
+
+.fondo-pre-footer .logo{
+    width: 231px;
+    height: 145px;
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    background-repeat: no-repeat;
+    background-image: url('../img/image\ 224.png');
+}
+
+.sponsors{
+    width: auto;
+    height: 80px;
+    background-color: #242424;
+    display: flex;
+}
+
+.sponsors img{
+    justify-content: center;
+    margin: auto;
+}
+
+.container-privacidad{
+    width: auto;
+    height: 598px;
+    background-color: #5E5E5D;
+}
+
+.container-privacidad .privacidad{
+    color: white;
+    font-family: Lato;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.privacidad p{
+    width: 80%;
+    font-size: 20px;
+}
+
+.privacidad #cookie-text{
+    margin-top: 20px;
+}
+
+#redes{
+    width: 212px;
+    height: 41px;
+    margin-top: 50px;
+}
