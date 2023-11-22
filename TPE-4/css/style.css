@@ -12,6 +12,35 @@
     width: 1080px;
     display: flex;
 }
+
+.navbar-scroll{
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #5499F8;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+}
+
+.visible{
+    display: flex;
+}
+
+.no-visible{
+    display: none;
+}
+
+#titulo-logo{
+    position: sticky;
+    top: 0px;
+    margin-left: auto;
+    margin-right: 25%;
+    z-index: 100;
+}
+
 .navbar{
     align-items: center;
     margin-left: auto;
@@ -19,6 +48,8 @@
     background-color: #5499F8;
     display: flex;
     justify-content: center;
+    position: sticky;
+    z-index: 99;
 }
 
 header{
@@ -96,9 +127,8 @@ header .barras{
     position: relative;
 }
 
-.content{
+.container-content,.title-img,.content,img{
     margin: auto;
-    justify-content: center;
 }
 
 .edificio-3{
@@ -209,7 +239,7 @@ header .barras{
     width: 100%;
     height: 845px;
     margin-top: -35px;
-    z-index: 1;
+    z-index: 0;
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
