@@ -30,6 +30,7 @@ body{
     background-color: #5499F8;
     display: flex;
     justify-content: center;
+    
 }
 
 header{
@@ -40,14 +41,15 @@ header{
     padding-top: 20px;
 }
 
-header .btn-menu{
+
+header #btn-menu{
     width: 34px;
     height: 26px;
     filter: drop-shadow(4px 5px 0px #02187E);
     cursor: pointer;
 }
 
-header .barras{
+header #btn-menu .barras{
     box-sizing: content-box;
     display: block;
     width: 100%;
@@ -55,21 +57,91 @@ header .barras{
     background-color: #FFE901;
     border: 4px solid #2981FF;
     border-radius: 10px;
-    transform-origin: 0px 100%;
-    transition: all 300ms;
+    /*transform-origin: 0px 100%;*/
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
 
-.active-linea1{
-    transform: rotate(45deg) translate(-6px, 2px);
+header .open .linea1{
+    animation-name: linea1-animation;
 }
 
-.active-linea2{
-    opacity: 0;
-    margin-left: -34px;
+header .open .linea2{
+    animation-name: linea2-animation;
 }
 
-.active-linea3{
-    transform: rotate(-45deg) translate(-4px, 4px);
+header .open .linea3{
+    animation-name: linea3-animation;
+}
+
+header .linea1{
+    animation-name: linea1-animation-close;
+}
+
+header .linea2{
+    animation-name: linea2-animation-close;
+}
+
+header .linea3{
+    animation-name: linea3-animation-close;
+}
+
+@keyframes linea1-animation-close {
+    0%{
+        /*margin: 0 auto;*/
+        transform: translateY(12px) rotate(-45deg);
+    }
+    50%,100%{
+        /*margin: 5px auto;*/
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+@keyframes linea1-animation {
+    50%,100%{
+        /*margin: 0 auto;*/
+        transform: translateY(12px) rotate(-45deg);
+    }
+}
+
+@keyframes linea3-animation {
+    50%,100%{
+        /*margin: 0 auto;*/
+        transform: translateY(-10px) rotate(45deg);
+    }
+}
+
+@keyframes linea3-animation-close {
+    0%{
+        /*margin: 0 auto;*/
+        transform: translateY(-10px) rotate(45deg);
+    }
+
+    50%,100%{
+        /*margin: 5 auto;*/
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+@keyframes linea2-animation {
+    20%,100%{
+        /*margin: 0 auto;*/
+        width: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes linea2-animation-close {
+    0%{
+        /*margin: 0 auto;*/
+        width: 0;
+        opacity: 0;
+    }
+    20%,100%{
+        /*margin: 0 auto;*/
+        width: 100%;
+        opacity: 1;
+    }
 }
 
 header .btn-comprar{
@@ -290,20 +362,21 @@ header .btn-comprar:hover{
     right: 50px;
     width: 365px;
     height: 465px;
+    opacity: 0;
     /*background-size: cover;*/
     background-repeat: no-repeat;
     background-image: url('../img/personajes/image\ 2.png');
     position: relative;
-    animation: animacioEntradaPersDefault 1.2s  ease;
+    animation: animacioEntradaPersDefault 1.2s 0.8s ease forwards;
 }
 
 @keyframes animacioEntradaPersDefault {
     from{
-        transform: scale(0.2);
+        transform: translateY(-600px);
         opacity: 0;
     }
     to{
-        transform: scale(1);
+        transform: translateY(0);
         opacity: 1;
     }
 }
@@ -395,7 +468,8 @@ header .btn-comprar:hover{
 
 .section-2 .img-duende{
     right: 45px;
-    top: 15px;
+    /*top: 15px;*/
+    bottom: -10px;
     position: relative;
 }
 
@@ -418,13 +492,38 @@ header .btn-comprar:hover{
     justify-content: space-around;
 }
 
-/*.card{
-    width: 33%;
-}*/
+.card{
+    opacity: 0;
+}
 
 /*.card img{
     margin: 10px;
 }*/
+
+.card1{
+    animation: animacionCard 1.3s ease forwards;
+}
+
+.card2{
+    animation: animacionCard 1.3s ease forwards;
+    animation-delay: 0.5s;
+}
+
+.card3{
+    animation: animacionCard 1.3s ease forwards;
+    animation-delay: 1s;
+}
+
+@keyframes animacionCard{
+    0%{
+        transform: translateY(600px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 .text-card{
     margin-top: 15px;
