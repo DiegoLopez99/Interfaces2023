@@ -4,9 +4,7 @@
 const edificio1 = document.querySelector('.edificio-3');
 const edificio2 = document.querySelector('.edificio-4');
 const edificio3 = document.querySelector('.edificio-5');
-
-
-const cielo = document.querySelector('.background-1')
+const duende = document.querySelector('.img-duende');
 
 window.addEventListener('scroll',function(){
     let value = window.scrollY;
@@ -14,6 +12,7 @@ window.addEventListener('scroll',function(){
     edificio1.style.backgroundPositionY = value * 0.20 + 'px';
     edificio2.style.backgroundPositionY = value * 0.10 + 'px';
     edificio3.style.backgroundPositionY = value * 0.04 + 'px';
+    duende.style.top = value * 0.1 + 'px';
 })  
 
 //activado y desactivado del menu mientras scrolleas
@@ -32,13 +31,13 @@ function callback(entries){
 }
 
 function mostrar(entry){
-    entry.classList.remove('no-visible')
+    entry.classList.remove('no-visible');
     entry.classList.add('visible');
 }
 
 function noMostrar(entry){
     entry.classList.remove('visible');
-    entry.classList.add('no-visible')
+    entry.classList.add('no-visible');
 }
 
 const options = {
