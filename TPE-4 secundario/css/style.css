@@ -1,0 +1,836 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Lato', sans-serif;
+}
+
+body{
+    background-color: black;
+    width: 1280px;
+}
+
+.container-adjust{
+    width: 1080px;
+    
+}
+
+.contenedor{
+    width: 1280px;
+    overflow: hidden;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    background-color: #5499F8;
+    display: flex;
+    justify-content: center;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    padding-top: 20px;
+}
+
+header .btn-menu{
+    width: 34px;
+    height: 26px;
+    filter: drop-shadow(4px 5px 0px #02187E);
+    cursor: pointer;
+}
+
+header .barras{
+    box-sizing: content-box;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #FFE901;
+    border: 4px solid #2981FF;
+    border-radius: 10px;
+    transform-origin: 0px 100%;
+    transition: all 300ms;
+}
+
+.active-linea1{
+    transform: rotate(45deg) translate(-6px, 2px);
+}
+
+.active-linea2{
+    opacity: 0;
+    margin-left: -34px;
+}
+
+.active-linea3{
+    transform: rotate(-45deg) translate(-4px, 4px);
+}
+
+header .btn-comprar{
+    height: 50px;
+    width: 200px;
+    background-color: #FFE901;
+    box-shadow: 3px 3px 3px black;
+    border: 5px;
+    border-style: solid;
+    border-color: #2982ff;
+    border-radius: 111px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 94.5%;
+
+    color: #02187E;
+    font-size: 20px;
+    /*font-weight: bold;*/
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out;
+}
+
+header .btn-comprar:hover{
+    transform: scale(1.1);
+    background-color: #ffea01b6;
+}
+
+.container-sections{
+    width: 100%;
+    position: relative;
+    /*display: flex;*/
+}
+
+.fondo{
+    width: 100%;
+}
+
+.background-1{
+    width: 100%;
+    height: 720px;
+    position: relative;
+}
+
+.background-1 .img-fondo{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.background-1 .img-fondo img{
+    width: 100%;
+    height: 100%;
+}
+
+.background-1 .edificio-3{
+    width: 452px;
+    height: 720px;
+    position: absolute;
+    z-index: 1;
+    bottom: -10px;
+    left: -55px;
+}
+
+.background-1 .edificio-5{
+    width: 600px;
+    height: 213px;
+    position: absolute;
+    z-index: 1;
+    bottom: 10px;
+    left: 370px;
+}
+
+.background-1 .edificio-4{
+    width: 374px;
+    height: 727px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0px;
+    right: -20px;
+}
+
+.background-1 .edificio-3 img{
+    width: 100%;
+    height: 100%;
+}
+
+.background-1 .edificio-4 img{
+    width: 100%;
+    height: 100%;
+}
+
+.background-1 .edificio-5 img{
+    width: 100%;
+    height: 100%;
+}
+
+.background-presentacion{
+    width: 100%;
+    height: 845px;
+    margin-top: -85px;
+    position: relative;
+    z-index: 1;
+}
+
+.background-presentacion .img-back{
+    width: 100%;
+    height: 100%;
+}
+
+.background-presentacion .img-back img{
+    width: 100%;
+    height: 100%;
+}
+
+.content{
+    margin-left: 100px;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+.section-1{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-1 .container-logo{
+    width: 590px;
+    height: 300px;
+    position: relative;
+    top: -35px;
+}
+
+.section-1 .container-logo img{
+    width: 100%;
+    height: 100%;
+}
+
+.section-1 .container-personajes{
+    width: 100%;
+    display: flex;
+}
+
+.personaje-negro{
+    bottom: 100px;
+    right: 90px;
+    /*background-size: cover;*/
+    width: 360px;
+    height: 393px;
+    background-image: url('../img/personajes/image\ 1.png');
+    background-repeat: no-repeat;
+    position: relative;
+}
+.personaje-default{
+    top: -50px;
+    right: 50px;
+    width: 365px;
+    height: 465px;
+    /*background-size: cover;*/
+    background-repeat: no-repeat;
+    background-image: url('../img/personajes/image\ 2.png');
+    position: relative;
+}
+.personaje-rosa{
+    height: 444px;
+    width: 340px;
+    top: -60px;
+    left: -20px;
+    position: relative;
+    /*background-size: cover;*/
+    background-repeat: no-repeat;
+    background-image: url('../img/personajes/image\ 3.png');
+}
+
+.personaje-default .telaraña-1{
+    width: 730px;
+    height: 627px;
+    top: -5px;
+    left: -560px;
+    position: absolute;
+}
+
+.personaje-default .telaraña-1 img{
+    width: 100%;
+    height: 100%;
+}
+.personaje-negro .telaraña-2{
+    width: 420px;
+    height: 370px;
+    top: 65px;
+    right: -345px;
+    position: absolute;
+}
+
+.personaje-negro .telaraña-2 img{
+    width: 100%;
+    height: 100%;
+}
+
+.section-2{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.section-2 .presentacion{
+    display: flex;
+    flex-direction: column;
+    width: 645px;
+    position: relative;
+}
+
+.section-2 .presentacion .titulo-presentacion{
+    font-size: 60px;
+    padding-bottom: 20px;
+    color: white;
+}
+
+.section-2 .presentacion .texto-presentacion{
+    font-size: 20px;
+    font-weight: 300px;
+    color: white;
+}
+
+.section-2 .presentacion .img-escenario-1{
+    width: 770px;
+    height: 413px;
+    margin-left: -10px;
+}
+
+.section-2 .presentacion .img-escenario-1 img{
+    width: 100%;
+    height: 100%;
+}
+
+.section-2 .img-duende{
+    right: 45px;
+    top: 15px;
+    position: relative;
+}
+
+.background-2{
+    width: 100%;
+    height: 1085px;
+    position: relative;
+    top: -150px;
+}
+
+.background-2 .img-back{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.section-3{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+/*.card{
+    width: 33%;
+}*/
+
+/*.card img{
+    margin: 10px;
+}*/
+
+.text-card{
+    margin-top: 15px;
+    width: 333px;
+    justify-self: start;
+    text-align: start;
+    height: 218px;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.background-3{
+    width: 100%;
+    height: 566px;
+    position: relative;
+    top: -210px;
+}
+
+.background-3 .img-back{
+    width: 100%;
+    height: 100%;
+}
+
+.background-3 .img-back img{
+    width: 100%;
+    height: 100%;
+}
+
+.section-4{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 820px;
+}
+
+.section-4 .gamecard-1{
+    position: relative;
+    top: -40px;
+    left: -50px;
+}
+
+.section-4 .gamecard-2{
+    position: relative;
+    top: -348px;
+    left: -65px;
+}
+
+.section-4 .gamecard-3{
+    position: relative;
+    top: -700px;
+    left: -40px;
+}
+
+.background-4{
+    width: 100%;
+    height: 770px;
+    margin-top: -210px;
+}
+
+.background-5{
+    width: 100%;
+    height: 2194px;
+    position: relative;
+    /*top: -210px;*/
+}
+
+.background-5 .img-back{
+    width: 100%;
+    height: 100%;
+}
+
+.background-5 .img-back img{
+    width: 100%;
+    height: 100%;
+}
+
+.section-5{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+}
+
+.section-5 .container-vengadores{
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+
+.section-5 .container-vengadores h2{
+    font-size: 60px;
+    color: white;
+    width: 55%;
+    
+}
+
+.section-5 .container-img-vengadores{
+    width: 100%;
+    height: 527px;
+    position: relative;
+    box-shadow: 26px 29px 41px 14px rgba(0, 0, 0, 0.15);
+}
+
+.section-5 .container-img-vengadores .parallax-1{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.section-5 .container-img-vengadores .parallax-2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.section-5 .container-img-vengadores .parallax-3{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.section-5 .container-img-vengadores .parallax-4{
+    position: absolute;
+    bottom: -55px;
+    right: -30px;
+    width: 410px;
+    height: 438px;
+}
+
+.section-5 .container-img-vengadores .parallax-4 img{
+    width: 100%;
+    height: 100%;
+}
+
+.section-5 .container-img-vengadores .parallax-5{
+    position: absolute;
+    top: -220px;
+    left: 500px;
+    width: 380px;
+    height: 520px;
+    transform: rotate(15deg);
+}
+
+.section-5 .container-img-vengadores .parallax-5 img{
+    width: 100%;
+    height: 100%;
+}
+
+.section-5 .container-img-vengadores .parallax-6{
+    position: absolute;
+    top: -95px;
+    left: 50px;
+    width: 550px;
+    height: 670px;
+}
+
+.section-5 .container-img-vengadores .parallax-6 img{
+    width: 100%;
+    height: 100%;
+}
+
+.section-6{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+}
+
+.section-6 .subtitulo{
+    font-size: 60px;
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+
+.section-6 .seccion{
+    display: flex;
+    margin-bottom: 120px;
+}
+
+/*.section-6 .seccion .img{
+    height: 305px;
+    width: 550px;
+}*/
+
+/*.section-6 .seccion .img img{
+    height: 100%;
+    width: 100%;
+}*/
+
+.section-6 .seccion .contenido-seccion{
+    margin-left: 57px;
+}
+
+.section-6 .seccion .contenido-seccion h4{
+    font-size: 36px;
+
+}
+
+.section-6 .seccion .contenido-seccion .texto-seccion{
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.background-6{
+    width: 100%;
+    height: 248px;
+    /*margin-top: -10px;*/
+}
+
+.background-7{
+    width: 100%;
+    height: 720px;
+    position: relative;
+    /*top: -210px;*/
+}
+
+.background-7 .img-back{
+    width: 100%;
+    height: 100%;
+}
+
+.background-7 .img-back img,
+.background-8 .img-back img,
+.background-8 .img-back-secund img,
+.background-8 .personaje-1 img,
+.background-8 .personaje-3 img,
+.background-8 .personaje-2 img{
+    width: 100%;
+    height: 100%;
+}
+
+.background-8{
+    width: 100%;
+    height: 1296px;
+    /*position: relative;*/
+    /*top: -210px;*/
+}
+
+.background-8 .container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.background-8 .img-back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.background-8 .img-back-secund{
+    width: 100%;
+    height: 720px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.background-8 .personaje-1{
+    width: 97px;
+    height: 89px;
+    position: absolute;
+    bottom: 71px;
+    left: 219px;
+}
+
+.background-8 .personaje-2{
+    width: 58px;
+    height: 64px;
+    position: absolute;
+    bottom: 160px;
+    left: 533px;
+}
+
+.background-8 .personaje-3{
+    width: 94px;
+    height: 88px;
+    position: absolute;
+    bottom: 239px;
+    right: 188px;
+}
+
+.background-9{
+    width: 100%;
+    height: 75px;
+}
+
+.background-9 .img-back{
+    width: 100%;
+    height: 100%;
+}
+.background-9 .img-back img{
+    width: 100%;
+    height: 100%;
+}
+
+.section-7{
+    width: 100%;
+    margin-top: 40px;
+}
+
+.section-7 .container-comprar{
+    width: 816px;
+    margin-top: 25px;
+}
+
+.section-7 .container-comprar h5{
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 72px;
+    color: white;
+}
+
+.section-7 .btn-comprar{
+    background: #FFE901;
+    border: 8px solid #2982FF;
+    box-shadow: 4px 5px 0px #02187E;
+    border-radius: 111px;
+    margin-top: 40px;
+    padding: 16px 44px;
+}
+
+.section-7 .btn-comprar p{
+    -webkit-text-stroke: 1px #02187E;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 94.5%;
+    letter-spacing: 0.11em;
+    color: #02187E;
+}
+
+.section-8{
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    margin-top: 170px;
+}
+
+.section-8 .person1{
+    width: 268px;
+    height: 416px;
+    position: relative;
+    left: 90px;
+}
+
+.section-8 .person2{
+    width: 416px;
+    height: 457px;
+    position: relative;
+    left: 30px;
+    top: 10px;
+}
+
+.section-8 .person3{
+    width: 313px;
+    height: 398px;
+    position: relative;
+    right: 0px;
+    top: 10px;
+}
+
+.section-9{
+    width: 100%;
+    margin-top: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-9 h6{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 94.5%;
+    text-align: center;
+    color: #000000;
+    width: 816px;
+}
+
+.section-9 .subscribirse{
+    display: flex;
+    margin-top: 46px;
+}
+
+.section-9 .subscribirse .text-input{
+    width: 562px;
+    height: 100px;
+    font-size: 20px;
+    padding-left: 52px;
+    border-radius: 50px 0px 0px 50px;
+    border-width: 9px 0px 9px 9px;
+    border-style: solid;
+    border-color: #2982FF;
+    box-shadow: 4px 5px 0px #02187E;
+    border-radius: 50px 0px 0px 50px;
+}
+
+.section-9 .subscribirse .btn-subscribirse{
+    width: 218px;
+    background: #FFE901;
+    border: 9px solid #2982FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px 0px 0px 50px;
+    box-shadow: 0px 5px 0px #02187E;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    margin-left: -1px;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+}
+
+.section-9 .subscribirse .btn-subscribirse:hover{
+    background: #bdad00;
+}
+
+.section-9 .subscribirse .btn-subscribirse p{
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    color: #02187E;
+}
+
+.section-9 .cont{
+    width: 578px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 39px;
+    margin-left: -90px;
+}
+
+.section-9 .cont .text-subscribirse{
+    font-size: 20px;
+}
+
+.section-9 .cont .text-subscribirse #subrayado{
+    text-decoration: underline  ;
+}
+
+.section-9 .cont .fondo-pre-footer{
+    margin-top: 30px;
+}
+
+.section-9 .cont .fondo-pre-footer .logo{
+    width: 231px;
+    height: 145px;
+}
+
+.section-9 .cont .fondo-pre-footer .logo img{
+    width: 100%;
+    height: 100%;
+}
+
+.section-10{
+    width: 100%;
+    height: 75px;
+    margin-top: 520px;
+}
+
+.section-10 .cont-img{
+    width: 100%;
+    height: 100%;
+}
+
+.section-10 .cont-img img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
