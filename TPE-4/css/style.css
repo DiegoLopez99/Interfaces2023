@@ -120,15 +120,32 @@ header .barras{
     width: 100%;
     height: 720px;
     z-index: 0;
-    background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
+
     background-image: url('../img/Untitled-1\ 1.png');
     position: relative;
 }
 
 .container-content,.title-img,.content,img{
     margin: auto;
+}
+
+@keyframes desplazamiento{
+    from{
+        opacity: 0;
+        transform: translateY(0px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(110px);
+    }
+}
+
+#logo-central{
+    position: relative;
+    z-index: 1;
+    opacity:0;
+    animation: desplazamiento 2s ease-out forwards;
 }
 
 .edificio-3{
@@ -354,7 +371,7 @@ header .barras{
     background-image: url('../img/screens/test.png');
 }
 .background-solido{
-    z-index: 3;
+    z-index: 2;
     position: relative;
     margin-top: -120px;
     width: 100%;
@@ -461,13 +478,15 @@ header .barras{
 
 .background-2 .seccion{
     margin: auto;
-    margin-top: 35px;
+    margin-top: 3em;
     margin-bottom: 70px;
     display: flex;
+    position: relative;
 }
 
 .background-2 .contenido-seccion{
     margin-left: 60px;
+    flex: 1 1 50%;
 }
 
 .background-2 h4{    
@@ -481,6 +500,11 @@ header .barras{
     font-size: 18px;
 }
 
+.background-2 .seccion img{
+    display: block;
+    max-width: 100%;
+    margin-bottom: 0.5em;
+}
 
 .container-comprar{
     margin: auto;
@@ -503,12 +527,21 @@ header .barras{
 }
 
 .container-personajes{
-    width: 1263px;
+    width: 1280px;
     height: 700px;
     align-items: center;
     position: relative;
     justify-content: space-around;
     background-image: url('../img/Rectangle\ 10.png');
+}
+
+.personajes-hover{
+    display: flex;
+    margin: auto;
+}
+
+#personaje-rosa,#persona-default,#persona-negro{
+    margin:auto;
 }
 
 .pre-footer{
