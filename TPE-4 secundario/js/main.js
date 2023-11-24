@@ -12,5 +12,15 @@ addEventListener("DOMContentLoaded", (e) => {
     }
 
     document.querySelector(".btn-menu").addEventListener("click", animateBars);
+    window.addEventListener("scroll", function(){
+        let posicion = window.scrollY || document.documentElement.scrollTop;
+        let personajeRosa = document.querySelector("#personajeRosa");
+        let personajeDefault = document.querySelector("#personajeDefault");
+        let personajeNegro = document.querySelector("#personajeNegros");
+
+        personajeDefault.style.bottom = posicion * 0.1 + "px";
+        personajeNegro.style.bottom = posicion * 0.3 + "px";
+        personajeRosa.style.top = posicion * 0.2 + "px";
+    });
 
 });
