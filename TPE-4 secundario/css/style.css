@@ -849,11 +849,21 @@ header .btn-comprar:hover{
 }
 
 .background-8 .personaje-3{
-    width: 94px;
-    height: 88px;
+    width: 45px;
+    height: 42px;
     position: absolute;
-    bottom: 239px;
+    bottom: 245px;
     right: 188px;
+    background-image: url('../img/spritesheet2.png');
+    background-size: cover;
+    transform: scaleX(-1);
+    animation: cambiarFrames 0.9s steps(4) infinite;
+}
+
+@keyframes cambiarFrames {
+    to {
+      background-position: 333px 0px;
+    }
 }
 
 .background-9{
@@ -1084,6 +1094,7 @@ header .btn-comprar:hover{
     height: 41px;
     margin-top: 50px;
 }
+
 
 
 

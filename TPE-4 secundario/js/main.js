@@ -127,6 +127,8 @@ addEventListener("DOMContentLoaded", (e) => {
     
 });
 
+
+// distintos tipos de animacion a los heroes
 document.addEventListener('DOMContentLoaded' , () => {
     const personaje1 = document.querySelector('.person1');
     const personaje2 = document.querySelector('.person2');
@@ -217,3 +219,4 @@ document.addEventListener('DOMContentLoaded' , () => {
     }
 
 });
+
