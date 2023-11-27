@@ -1,72 +1,136 @@
-
-//movimiento edificios
-
-const edificio1 = document.querySelector('.edificio-3');
-const edificio2 = document.querySelector('.edificio-4');
-const edificio3 = document.querySelector('.edificio-5');
-const duende = document.querySelector('.img-duende');
-
-window.addEventListener('scroll',function(){
-    let value = window.scrollY;
-
-    edificio1.style.backgroundPositionY = value * 0.20 + 'px';
-    edificio2.style.backgroundPositionY = value * 0.10 + 'px';
-    edificio3.style.backgroundPositionY = value * 0.04 + 'px';
-    duende.style.top = value * 0.1 + 'px';
-})  
-
-//activado y desactivado del menu mientras scrolleas
-
-// se podria llamar diferente
-function callback(entries){
-    entries.forEach(entry => {
-        if(!entry.isIntersecting){
-            mostrar(quitar);
-            element.classList.toggle('.navbar-scroll')
-        }
-        else{
-            noMostrar(quitar)
-        }
-    });
-}
-
-function mostrar(entry){
-    entry.classList.remove('no-visible');
-    entry.classList.add('visible');
-}
-
-function noMostrar(entry){
-    entry.classList.remove('visible');
-    entry.classList.add('no-visible');
-}
-
-const options = {
-    root: null,
-    rootMargin:'50px' ,
-    threshold : 0
-}
-
-const observer = new IntersectionObserver(callback, options);
-const element = document.querySelector('.navbar');
-const quitar = document.querySelector('.navbar-scroll')
-const observado = document.querySelector('#logo-central')
-
-observer.observe(observado);
-
 addEventListener("DOMContentLoaded", (e) => {
 
-    let linea1 = document.querySelector(".linea1");
-    let linea2 = document.querySelector(".linea2");
-    let linea3 = document.querySelector(".linea3");
+    // ------- Loader --------
+    const loader = document.querySelector("#loader");
+    const containerSitio = document.querySelector("#containerSitio");
 
+    setTimeout(function(){
+        loader.classList.add('cerrarLoader');
+        containerSitio.classList.add('activarSitio')
+    }, 5000); 
+
+    const btnMenu = document.querySelector("#btn-menu");
+    const menu = document.querySelector(".contenedorItems");
     function animateBars(){
-        
-        linea1.classList.toggle("active-linea1");
-        linea2.classList.toggle("active-linea2");
-        linea3.classList.toggle("active-linea3");
+        btnMenu.classList.toggle("open");
+        menu.classList.toggle("open");
     }
 
-    document.querySelector(".btn-menu").addEventListener("click", animateBars);
+    btnMenu.addEventListener("click", animateBars);
 
+    window.addEventListener("scroll", function(event){
+        let posicion = window.scrollY || document.documentElement.scrollTop;
+        let personajeRosa = document.querySelector("#personajeRosa");
+        let personajeDefault = document.querySelector("#personajeDefault");
+        let personajeNegro = document.querySelector("#personajeNegros");
+        let duende = document.querySelector("#img-duende");
+        let gamecard1 = document.querySelector('.gamecard-1');
+        let gamecard2 = document.querySelector('.gamecard-2');
+        let gamecard3 = document.querySelector('.gamecard-3');
+
+        personajeDefault.style.bottom = posicion * 0.1 + "px";
+        personajeNegro.style.bottom = posicion * 0.3 + "px";
+        personajeRosa.style.top = posicion * 0.1 + "px";
+        duende.style.bottom = posicion * 0.15 + "px";
+        
+        gamecard1.style.top = posicion * -0.03 + "px";
+        gamecard2.style.top = posicion * -0.15 + "px";
+        gamecard3.style.top = posicion * -0.3 + "px";
+
+    
+    });
+
+    document.querySelector("#seccionParallaxMouseMove").addEventListener('mousemove', e=>{
+        
+        let phanter = document.querySelector("#phanter");
+        let hulk = document.querySelector("#hulk");
+        let person1 = document.querySelector("#person1");
+        let sensibilidad = 135;
+
+        const x = e.clientX;
+        const y = e.clientY;
+
+        phanter.style.transform = `
+            translate(
+                ${x/sensibilidad}%,
+                ${y/sensibilidad}%
+        ) rotate(15deg)`;
+
+        hulk.style.transform = `
+            translate(
+                ${x/sensibilidad}%,
+                ${y/sensibilidad}%
+        )`;
+
+        person1.style.transform = `
+            translate(
+                ${x/sensibilidad}%,
+                ${y/sensibilidad}%
+        )`;
+
+
+    }); 
+
+    const observerCards = new IntersectionObserver(entries =>{
+        entries.forEach(entry =>{
+            if(entry.isIntersecting){
+                document.querySelectorAll(".card")[0].classList.add("card1");
+                document.querySelectorAll(".card")[1].classList.add("card2");
+                document.querySelectorAll(".card")[2].classList.add("card3");
+            }
+        });
+    });
+
+    observerCards.observe(document.querySelector(".section-3"))
+
+
+    function callback(entries){
+        entries.forEach(entry => {
+            if(!entry.isIntersecting){
+                console.log("funciona")
+                activarLogoNavbar(logoNavbar);
+                activarNavbarOnScroll(navbar);
+            }
+            else{
+                desactivarLogoNavbar(logoNavbar);
+                desactivarNavbarOnScroll(navbar);
+            }
+        });
+    }
+    
+    function activarNavbarOnScroll(entry){
+        entry.classList.toggle('activar');
+        menu.style.transform = 'translateY(17px)';
+    }
+
+    function activarLogoNavbar(entry){
+        entry.classList.add('activarImg');
+    }
+
+    function desactivarLogoNavbar(entry){
+        entry.classList.remove('activarImg')
+        entry.classList.add('desactivarImg')
+    }
+
+    function desactivarNavbarOnScroll(entry){
+        entry.classList.remove('activar')
+        menu.style.transform = 'translateY(-17px)';
+    }
+
+
+    const options = {
+        root: null,
+        rootMargin:'50px' ,
+        threshold : 0
+    }
+    
+    const observer = new IntersectionObserver(callback, options);
+
+    const navbar = document.querySelector('.navbar');
+    const logoNavbar = document.querySelector('#titulo-logo');
+    const element = document.querySelector('#logo-central')
+    const header = document.querySelector('header-nav')
+    
+    observer.observe(element);
+    
 });
-
