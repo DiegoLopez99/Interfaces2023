@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Pacifico&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+    <title>Entregable 4</title>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="navbar">
+            <header class="container-adjust header-nav">
+                <div class="" id="btn-menu">
+                    <span class="linea1 barras"></span>
+                    <span class="linea2 barras"></span>
+                    <span class="linea3 barras"></span>
+                </div>
+                <img src="./img/title.png" alt="" id="titulo-logo">
+                <button class="btn-comprar">COMPRAR</button>
+            </header>
+        </div>
+        <div class="container-sections">
+            <div class="fondo">
+                <section class="background-1">
+                    <div class="img-fondo">
+                        <img src="img/Untitled-1 1.png" alt="">
+                    </div>
+                    <div class="edificio-3">
+                        <img src="img/Untitled-1 3.png" alt="">
+                    </div>
+                    <div class="edificio-5">
+                        <img src="img/Untitled-1 5.png" alt="">
+                    </div>
+                    <div class="edificio-4">
+                        <img src="img/Untitled-1 4.png" alt="">
+                    </div>
+                </section>
+                <section class="background-presentacion">
+                    <div class="img-back">
+                        <img src="img/Rectangle 8.png" alt="">
+                    </div>
+                </section>
+                <section class="background-2">
+                    <div class="img-back">
+                        
+                    </div>
+                </section>
+                <section class="background-3">
+                    <div class="img-back">
+                        <img src="img/image 223.png" alt="">
+                    </div>
+                </section>
+                <section class="background-4"></section>
+                <section class="background-5">
+                    <div class="img-back">
+                        <img src="img/Rectangle 9.png" alt="">
+                    </div>
+                </section>
+                <section class="background-6">
+                </section>
+                <section class="background-7">
+                    <div class="img-back">
+                        <img class="fondoIntercambiable" src="img/Rectangle 10fongo back 7.png" alt="">
+                    </div>
+                </section>
+                <section class="background-8">
+                    <div class="container">
+                        <div class="img-back">
+                            <img src="img/Rectangle 11.png" alt="">
+                        </div>
+                        <div class="img-back-secund">
+                            <img src="img/Untitled-1 55.png" alt="">
+                        </div>
+                        <div class="personaje-1">
+                            <img src="img/image 228.png" alt="">
+                        </div>
+                        <div class="personaje-2">
+                            <img src="img/image 239.png" alt="">
+                        </div>
+                        <div class="personaje-3">
+                            
+                        </div>
+                    </div>
+                </section>
+                <section class="background-9">
+                    <div class="img-back">
+                        <img src="img/Rectangle 19.png" alt="">
+                    </div>
+                </section>
+            </div>
+            <div class="content container-adjust">
+                <section class="section-1">
+                    <div class="container-logo">
+                        <img src="img/image 5 1.png" alt="" id="logo-central">
+                    </div>
+                    <div class="container-personajes">
+                        <div class="personaje-rosa" id="personajeRosa"></div>
+                        <div class="personaje-default" id="personajeDefault">
+                            <div class="telaraña-1">
+                                <img src="img/personajes/Untitled-5 1.png" alt="">
+                            </div>
+                        </div>
+                        <div class="personaje-negro" id="personajeNegros">
+                            <div class="telaraña-2">
+                                <img src="img/personajes/Untitled-5 3.png" alt="">
+                            </div>    
+                        </div>
+                    </div>
+                </section>
+                <section class="section-2">
+                    <div class="presentacion">
+                        <div class="descripcion">
+                            <h1 class="titulo-presentacion">
+                                Conoce a Spidey y sus sorprendentes amigos
+                            </h1>
+                            <p class="texto-presentacion">
+                                Spidey, nuestro lanzador de telarañas favorito se une a Ghost-Spider (Gwen Stacey) 
+                                y Miles Morales para formar el equipo de Spidey, con la ayuda del cómico pero leal 
+                                robot de Spidey, TRACE-E. Si Spidey se encuentra en una situación difícil donde 
+                                necesita aún más poder de superhéroe, tengan la seguridad de que un amigo de los 
+                                Vengadores correrá para ayudar.
+                            </p>
+                        </div>
+                        <div class="img-escenario-1">
+                            <img src="img/screens/image 16.png" alt="">
+                        </div>
+                    </div>
+                    <div class="img-duende" id="img-duende">
+                        <img src="img/Untitled-3 1.png" alt="">
+                    </div>
+                </section>
+                <section class="section-3">
+                    <div class="card">
+                        <img src="./img/cards/image 13.png" alt="">
+                        <p class="text-card">
+                            Peter Parker, un joven huérfano neoyorquino que adquiere superpoderes después de ser 
+                            mordido por una araña radiactiva, y cuya ideología como héroe se ve reflejada 
+                            primordialmente en la expresión ”un gran poder conlleva una gran responsabilidad”.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <img src="./img/cards/image 8.png" alt="">
+                        <p class="text-card">
+                            Tras la muerte de Peter Parker, es quien toma la identidad de 
+                            <br>Spider-Man.<br>
+                            La elección del presidente Barack Obama en enero de 2009, fue 
+                            una fuente de inspiración para el cambio de etnicidad de Spider-Man.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <img src="./img/cards/image 24.png" alt="">
+                        <p class="text-card">
+                            El personaje es una variante de El Hombre Araña, una versión de universo alternativo 
+                            de Gwen Stacy. Ella reside en la "Tierra-65", donde, en lugar de Peter Benjamin Parker, 
+                            Gwen Stacy fue mordida por la Araña Radiactiva.
+                        </p>
+                    </div>
+                </section>
+                <section class="section-4">
+                    <div class="gamecard-1">
+                        <img src="img/screens/test (3).png" alt="">
+                    </div>
+                    <div class="gamecard-2">
+                        <img src="img/screens/test (1).png" alt="">
+                    </div>
+                    <div class="gamecard-3">
+                        <img src="img/screens/test.png" alt="">
+                    </div>
+                </section>
+                <section class="section-5" id="seccionParallaxMouseMove">
+                    <div class="container-vengadores">
+                        <h2>Los vengadores acompañando tu aventura  </h2>
+                    </div>
+                    <div class="container-img-vengadores">
+                        <div class="parallax-1">
+                            <img src="img/image 222 2.png" alt="">
+                        </div>           
+                        <div class="parallax-2">
+                            <img src="img/image 22 9.png" alt="">
+                        </div>
+                        <div class="parallax-3">
+                            <img src="img/image 22 7.png" alt="">
+                        </div>
+                        <div class="parallax-4" id="hulk">
+                            <img src="img/Untitled-2 2.png" alt="">
+                        </div>
+                        <div class="parallax-5" id="phanter">
+                            <img src="img/personajes/panther.png" alt="">
+                        </div>
+                        <div class="parallax-6" id="person1">
+                            <img src="img/personajes/image 22 8 (1).png" alt="">
+                        </div>
+                    </div> 
+                </section>
+                <section class="section-6">
+                    <h3 class="subtitulo">
+                        Mas amigos, mas diversión!
+                    </h3>
+                    <div class="seccion">
+                        <div class="img">
+                            <img src="./img/screens/image 21.png" alt=""> 
+                        </div>
+                       <div class="contenido-seccion">
+                            <h4>Mas de 100 misiones para que juegues sin parar!</h4>
+                            <p class="texto-seccion">
+                                Tus padres, contentos. Explora el emocionante mundo de 
+                                Spider-Man con más de 100 misiones que te mantendrán en 
+                                constante acción y adrenalina. Enfréntate a desafíos únicos, desentraña 
+                                misterios, y ayuda a Spider-Man a mantener la paz en la ciudad mientras 
+                                te sumerges en la piel del héroe arácnido. ¿Tienes lo que se necesita para superar 
+                                    todas las misiones y convertirte en el auténtico Spider-Man?
+                            </p>
+                       </div>
+                    </div>
+                    <div class="seccion">
+                        <div class="img">
+                            <img src="./img/screens/image 9.png" alt=""> 
+                        </div>
+                        <div class="contenido-seccion">
+                             <h4>Escenas deslumbrantes que te sorprenderán</h4>
+                             <p class="texto-seccion">
+                                Sumérgete en un universo de maravillas visuales con 'Spider-Man: [nombre del juego]'. 
+                                Nuestro juego te llevará a través de escenas deslumbrantes que te dejarán sin aliento. 
+                                Desde los rascacielos de Nueva York hasta los intrincados detalles de la vida de Peter 
+                                Parker, cada rincón de este mundo te sorprenderá. Prepárate para una experiencia única 
+                                que desafiará tus expectativas y te transportará a un asombroso viaje con el Hombre Araña.
+                             </p>
+                        </div>
+                     </div>
+                     <div class="seccion">
+                        <div class="img">
+                            <img src="./img/screens/image 10.png" alt=""> 
+                        </div>
+                        <div class="contenido-seccion">
+                             <h4>Cada misión te dará puntos que no sirven para nada!</h4>
+                             <p class="texto-seccion">
+                                Cada misión es una oportunidad para vivir la emocionante vida del Hombre Araña, y aunque los 
+                                puntos que ganarás no tengan un propósito específico, la verdadera recompensa está en la diversión 
+                                y la inmersión que experimentarás en cada desafío. No necesitas acumular puntos para sentirte como 
+                                un auténtico superhéroe, ya que la adrenalina de salvar la ciudad y la emoción de las acrobacias en 
+                                el aire son más que suficientes. ¡Así que prepárate para sumergirte en la acción y la aventura, sin 
+                                preocuparte por los puntos, y vive la experiencia definitiva de Spider-Man!
+                             </p>
+                        </div>
+                     </div>
+                     <div class="seccion">
+                        <div class="img">
+                            <img src="./img/screens/image 6.png" alt=""> 
+                        </div>
+                        <div class="contenido-seccion">
+                             <h4>Derrota a los villanos y diviértete</h4>
+                             <p class="texto-seccion">
+                                la diversión está asegurada mientras te enfrentas a los infames villanos de la ciudad de Nueva York. 
+                                Enfréntate a desafíos épicos, combate a tus enemigos más temibles y disfruta de una experiencia llena 
+                                de acción y emoción. Cada encuentro con los villanos te sumergirá en una batalla trepidante y te llevará
+                                 más cerca de convertirte en el auténtico Hombre Araña. Así que, ¿estás listo para derrotar a los villanos y 
+                                 sumergirte en la aventura definitiva de Spider-Man?"
+                             </p>
+                        </div>
+                     </div>
+                </section>
+                <section class="section-7">
+                    <div class="container-comprar">
+                        <h5>”un gran poder conlleva una gran responsabilidad”</h5>
+                        <div>
+                            <button class="btn-comprar"><p>COMPRAR AHORA</p></button>
+                        </div>
+                    </div>
+                </section>
+                <section class="section-8">
+                    <img class="person person1" src="img/personajes/image 229.png" alt="Personaje 1">
+                    <img class="person person2" src="img/personajes/image 231.png" alt="Personaje 2">
+                    <img class="person person3" src="img/personajes/image 230.png" alt="Personaje 3">
+                </section>
+                <section class="section-9">
+                    <h6>Lo último de SPIDEY Y SUS AMIGOS en tu buzón de correo electrónico</h6>
+                    <div class="subscribirse">    
+                        <input type="text" name="" id="" class="text-input" placeholder="Ingresa aquí tu correo">
+                        <buttom class="btn-subscribirse"><p>SUSCRIBIRSE</p></buttom>
+                    </div>
+                    <div class="cont">
+                        <div class="container-condicion">
+                            <p class="text-subscribirse">
+                                Al inscribirse en nuestra lista de correo, nos autoriza a ponernos en contacto con usted 
+                                para enviarle ofertas y actualizaciones de marketing por correo electrónico, y también 
+                                acepta nuestra <span id="subrayado">Política de privacidad</span> y las <span id="subrayado">Condiciones del servicio.</span>
+                            </p>
+                        </div>
+                        <div class="fondo-pre-footer">
+                            <div class="logo">
+                                <img src="img/image 224.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <section class="section-10">
+                <div class="sponsors">
+                    <div class="cont-img container-adjust">
+                        <img src="img/image 226.png" alt="">
+                    </div>
+                </div>
+            </section>
+            <div class="background-footer">
+                <div class="text-footer container-adjust">
+                    <p>
+                        ©SEGA. All rights reserved. SEGA is registered in the U.S. Patent 
+                        and Trademark Office. SEGA, the SEGA logo and SONIC SUPERSTARS are 
+                        either registered trademarks or trademarks of SEGA CORPORATION or 
+                        its affiliates. All other trademarks, logos and copyrights are property
+                            of their respective owners.©2023 The LEGO Group. LEGO, the LEGO logo, the 
+                            Minifigure, and the Brick and Knob configurations are trademarks and/or copyrights 
+                            of the LEGO Group. All other marks and trademarks are the property of their respective 
+                            owners. All rights reserved."PS", "PS5" and "PS4" are registered trademarks or trademarks 
+                            of Sony Interactive Entertainment Inc.Microsoft, the Xbox Sphere mark, the Series X logo, 
+                            Xbox One, and Xbox Series X are trademarks of the Microsoft group of companies.Nintendo 
+                            Switch is a trademark of NintendoEPIC GAMES and the EPIC STORE LOGO are trademarks
+                            or registered trademarks of EPIC GAMES INC.©2023 Valve Corporation. Steam and the Steam 
+                            logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or 
+                            other countries.The ESRB rating icons are registered trademarks of the Entertainment Software 
+                            Association.
+                        
+                    </p>
+                    <p id="cookie-text"><span id="subrayado">COOKIE POLICY PRIVACY POLICY</span></p>
+                    <img id="redes" src="./img/image 238.png" alt="">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
