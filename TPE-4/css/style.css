@@ -1112,15 +1112,30 @@ header .btn-comprar:hover{
 }
 
 .background-8 .personaje-2{
-    width: 58px;
-    height: 64px;
+    width: 53px;
+    height: 45px;
     position: absolute;
-    bottom: 160px;
+    bottom: 165px;
     left: 533px;
+    background-image: url('../img/spritesheet.png');
+    background-size: cover;
+}
+
+.background-8 .personaje-2:hover{
+    animation: cambiarFrames-1 0.5s steps(4) forwards;
+}
+
+@keyframes cambiarFrames-1 {
+    from{
+        background-position: 0px 0px;
+    }
+    to{
+        background-position: -235px;
+    }
 }
 
 .background-8 .personaje-3{
-    width: 45px;
+    width: 42px;
     height: 42px;
     position: absolute;
     bottom: 245px;
@@ -1128,12 +1143,19 @@ header .btn-comprar:hover{
     background-image: url('../img/spritesheet2.png');
     background-size: cover;
     transform: scaleX(-1);
-    animation: cambiarFrames 0.9s steps(4) infinite;
+
 }
 
-@keyframes cambiarFrames {
+.background-8 .personaje-3:hover{
+    animation: cambiarFrames-2 0.9s steps(8) forwards;
+}
+
+@keyframes cambiarFrames-2 {
+    from{
+        background-position: -4px;
+    }
     to {
-      background-position: 333px 0px;
+      background-position: -334px 0px;
     }
 }
 

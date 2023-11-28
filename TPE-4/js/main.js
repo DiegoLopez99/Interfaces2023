@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded' , () => {
     const personaje2 = document.querySelector('.person2');
     const personaje3 = document.querySelector('.person3');
 
-    const fondoIntercambiable = document.querySelector('.fondoIntercambiable')
+    const fondoIntercambiable = document.querySelector('.fondoIntercambiable');
 
     personaje1.addEventListener('mouseenter', () =>{
         cambiarFondo(fondoIntercambiable ,'fondo-rosa.png');
