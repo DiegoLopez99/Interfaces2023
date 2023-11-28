@@ -134,3 +134,96 @@ addEventListener("DOMContentLoaded", (e) => {
     observer.observe(element);
     
 });
+
+// distintos tipos de animacion a los heroes
+document.addEventListener('DOMContentLoaded' , () => {
+    const personaje1 = document.querySelector('.person1');
+    const personaje2 = document.querySelector('.person2');
+    const personaje3 = document.querySelector('.person3');
+
+    const fondoIntercambiable = document.querySelector('.fondoIntercambiable')
+
+    personaje1.addEventListener('mouseenter', () =>{
+        cambiarFondo(fondoIntercambiable ,'fondo-rosa.png');
+        desenfoque(personaje2,personaje3);
+        efectoPersonaje(personaje1);
+    });
+
+    personaje1.addEventListener('mouseleave', () => {
+        quitarDesenfoque(personaje2,personaje3);
+        quitarEfectoPersonaje(personaje1);
+        restaurarFondo(fondoIntercambiable);
+    })
+
+    personaje2.addEventListener('mouseenter', () =>{
+        cambiarFondo(fondoIntercambiable, 'fondo-azul.png');
+        desenfoque(personaje1,personaje3);
+        efectoPersonaje(personaje2);
+    });
+
+    personaje2.addEventListener('mouseleave', () => {
+        quitarDesenfoque(personaje1,personaje3);
+        quitarEfectoPersonaje(personaje2);
+        restaurarFondo(fondoIntercambiable);
+    })
+    
+    personaje3.addEventListener('mouseenter', () =>{
+        cambiarFondo(fondoIntercambiable, 'fondo-gris.png');
+        desenfoque(personaje1,personaje2);
+        efectoPersonaje(personaje3);
+    });
+
+    personaje3.addEventListener('mouseleave', () => {
+        quitarDesenfoque(personaje1,personaje2);
+        quitarEfectoPersonaje(personaje3);
+        restaurarFondo(fondoIntercambiable);
+    })
+
+    function cambiarFondo(elemento, ruta) {
+        if(elemento && elemento.tagName === 'IMG'){
+            elemento.style.transition = 'opacity 0.5 ease';
+            elemento.src =`./img/${ruta}`;
+        }
+        else{
+            console.error("elemento no encontrado");
+        }
+    }
+
+    function restaurarFondo(elemento){
+        if(elemento){
+            elemento.src = './img/Rectangle 10fongo back 7.png';
+        }
+        else{
+            console.error('el elemento no fue encontrado');
+        }
+    }
+
+    function desenfoque(elem1, elem2){
+        elem1.style.transition = 'filter 0.3s ease'; 
+        elem2.style.transition = 'filter 0.3s ease';
+
+        elem1.style.filter = 'blur(5px)';
+        elem2.style.filter = 'blur(5px)';
+    }
+
+    function efectoPersonaje(elem){
+        elem.style.filter = 'blur(0px)';
+        elem.style.transition = 'transform 3s ease';
+        elem.style.transform = 'scale(1.1)';
+    }
+
+    function quitarDesenfoque(elem1,elem2){
+        elem1.style.transition = 'filter 0.3s ease'; 
+        elem2.style.transition = 'filter 0.3s ease';
+
+        elem1.style.filter = 'blur(0px)';
+        elem2.style.filter = 'blur(0px)';
+    }
+
+    function quitarEfectoPersonaje(elem){
+        elem.style.transition = 'transform 3s ease';
+        elem.style.transform = 'scale(1)';
+    }
+
+});
+
